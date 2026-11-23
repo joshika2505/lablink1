@@ -1,0 +1,1812 @@
+{
+  "catalogVersion": 2,
+  "users": [
+    {
+      "id": "usr-alex",
+      "email": "alex.rivera@lablink.edu",
+      "name": "Alex Rivera",
+      "role": "student",
+      "department": "Bioengineering",
+      "title": "Graduate Researcher • Bioengineering",
+      "weeklyQuotaHours": 6,
+      "usedHoursThisWeek": 4.5,
+      "certifications": [
+        "General Lab Safety",
+        "3D Printer & Laser Intro",
+        "Robotics Lab Safety"
+      ],
+      "passwordHash": "bb4c3ae3c800ad1717a136188f49e150:3392ee7b5ff18400b7bc72ee1bfc95777f4cae1d3638913c7d3ded92638f20b4ede2562c32223c109b67c91fd520ffd61ca6326f7b85f8a930dac90ead5befca"
+    },
+    {
+      "id": "usr-maya",
+      "email": "maya.lin@lablink.edu",
+      "name": "Maya Lin",
+      "role": "student",
+      "department": "Materials Science",
+      "title": "PhD Candidate • Materials Science",
+      "weeklyQuotaHours": 6,
+      "usedHoursThisWeek": 2,
+      "certifications": [
+        "General Lab Safety",
+        "CNC Machine Safety",
+        "Laser Cutter Certified"
+      ],
+      "passwordHash": "bb4c3ae3c800ad1717a136188f49e150:3392ee7b5ff18400b7bc72ee1bfc95777f4cae1d3638913c7d3ded92638f20b4ede2562c32223c109b67c91fd520ffd61ca6326f7b85f8a930dac90ead5befca"
+    },
+    {
+      "id": "usr-liam",
+      "email": "liam.vance@lablink.edu",
+      "name": "Liam Vance",
+      "role": "student",
+      "department": "Chemical Engineering",
+      "title": "M.S. Researcher • Chemical Eng.",
+      "weeklyQuotaHours": 6,
+      "usedHoursThisWeek": 4.5,
+      "certifications": [
+        "General Lab Safety",
+        "NMR Cryogen Safety",
+        "XRD Radiation Safety"
+      ],
+      "passwordHash": "bb4c3ae3c800ad1717a136188f49e150:3392ee7b5ff18400b7bc72ee1bfc95777f4cae1d3638913c7d3ded92638f20b4ede2562c32223c109b67c91fd520ffd61ca6326f7b85f8a930dac90ead5befca"
+    },
+    {
+      "id": "usr-elena",
+      "email": "elena.rostova@lablink.edu",
+      "name": "Dr. Elena Rostova",
+      "role": "faculty",
+      "department": "Electronics & Robotics",
+      "title": "Faculty Lead • Robotics & Circuits",
+      "weeklyQuotaHours": 20,
+      "usedHoursThisWeek": 4,
+      "certifications": [
+        "General Lab Safety",
+        "Workshop Green Tag",
+        "Laser Safety",
+        "Faculty Approver"
+      ],
+      "assignedLabIds": [
+        "lab-electronics",
+        "lab-robotics",
+        "lab-testing"
+      ],
+      "passwordHash": "bb4c3ae3c800ad1717a136188f49e150:3392ee7b5ff18400b7bc72ee1bfc95777f4cae1d3638913c7d3ded92638f20b4ede2562c32223c109b67c91fd520ffd61ca6326f7b85f8a930dac90ead5befca"
+    },
+    {
+      "id": "usr-admin",
+      "email": "joshika2505@gmail.com",
+      "name": "Marcus Chen",
+      "role": "admin",
+      "department": "Campus Lab Operations",
+      "title": "Platform Administrator",
+      "weeklyQuotaHours": 40,
+      "usedHoursThisWeek": 1,
+      "certifications": [
+        "System Administrator",
+        "Safety Officer",
+        "Calibration Lead"
+      ],
+      "passwordHash": ""
+    }
+  ],
+  "authorizedAdmins": [
+    {
+      "email": "joshika2505@gmail.com",
+      "name": "Marcus Chen",
+      "grantedBy": "System Setup",
+      "createdAt": "2026-11-23T09:55:54.381Z"
+    }
+  ],
+  "departments": [
+    {
+      "id": "dept-ece",
+      "name": "Electrical & Circuits",
+      "code": "ECE",
+      "headName": "Dr. Kevin Wu",
+      "instrumentCount": 6,
+      "uptimePercent": 99.1,
+      "accentColor": "pink",
+      "icon": "memory"
+    },
+    {
+      "id": "dept-rob",
+      "name": "Robotics & Automation",
+      "code": "ROBO",
+      "headName": "Prof. Arjun Patel",
+      "instrumentCount": 3,
+      "uptimePercent": 98.7,
+      "accentColor": "blue",
+      "icon": "precision_manufacturing"
+    },
+    {
+      "id": "dept-fab",
+      "name": "Making & Workshop",
+      "code": "MAKE",
+      "headName": "Prof. Lucas Meyer",
+      "instrumentCount": 6,
+      "uptimePercent": 97.9,
+      "accentColor": "mint",
+      "icon": "layers"
+    },
+    {
+      "id": "dept-cs",
+      "name": "Computing & VR",
+      "code": "COMP",
+      "headName": "Dr. Elena Rostova",
+      "instrumentCount": 3,
+      "uptimePercent": 99.4,
+      "accentColor": "butter",
+      "icon": "computer"
+    }
+  ],
+  "laboratories": [
+    {
+      "id": "lab-electronics",
+      "name": "Electronics & Circuits Lab (Sample)",
+      "departmentId": "dept-ece",
+      "departmentName": "Electrical & Circuits",
+      "building": "Sample Building A",
+      "room": "Room 104",
+      "accessLevel": "Open Student Access",
+      "capacity": 14,
+      "occupied": 7,
+      "status": "open",
+      "managerName": "Dr. Kevin Wu",
+      "managerTitle": "Electronics Lab Advisor",
+      "coordinates": {
+        "lat": 42.3616,
+        "lng": -71.0906,
+        "xPercent": 26,
+        "yPercent": 32
+      }
+    },
+    {
+      "id": "lab-making",
+      "name": "3D Printing & Making Hub (Sample)",
+      "departmentId": "dept-fab",
+      "departmentName": "Making & Workshop",
+      "building": "Sample Maker Hall",
+      "room": "Room 08",
+      "accessLevel": "Safety Briefing Required",
+      "capacity": 12,
+      "occupied": 9,
+      "status": "high_load",
+      "managerName": "Prof. Lucas Meyer",
+      "managerTitle": "Maker Lab Coordinator",
+      "coordinates": {
+        "lat": 42.3588,
+        "lng": -71.0935,
+        "xPercent": 46,
+        "yPercent": 64
+      }
+    },
+    {
+      "id": "lab-robotics",
+      "name": "Robotics Studio (Sample)",
+      "departmentId": "dept-rob",
+      "departmentName": "Robotics & Automation",
+      "building": "Sample Robotics Wing",
+      "room": "Room 204",
+      "accessLevel": "Badge Access",
+      "capacity": 10,
+      "occupied": 5,
+      "status": "open",
+      "managerName": "Prof. Arjun Patel",
+      "managerTitle": "Robotics Studio Lead",
+      "coordinates": {
+        "lat": 42.3602,
+        "lng": -71.0921,
+        "xPercent": 56,
+        "yPercent": 25
+      }
+    },
+    {
+      "id": "lab-computing",
+      "name": "Computers & VR Studio (Sample)",
+      "departmentId": "dept-cs",
+      "departmentName": "Computing & VR",
+      "building": "Sample Tech Center",
+      "room": "Room 302",
+      "accessLevel": "Open Student Access",
+      "capacity": 16,
+      "occupied": 6,
+      "status": "open",
+      "managerName": "Dr. Elena Rostova",
+      "managerTitle": "Computing Lab Lead",
+      "coordinates": {
+        "lat": 42.3595,
+        "lng": -71.089,
+        "xPercent": 76,
+        "yPercent": 44
+      }
+    },
+    {
+      "id": "lab-testing",
+      "name": "Testing & Measurement Bench (Sample)",
+      "departmentId": "dept-ece",
+      "departmentName": "Electrical & Circuits",
+      "building": "Sample Building A",
+      "room": "Room 112",
+      "accessLevel": "General Lab Safety",
+      "capacity": 10,
+      "occupied": 4,
+      "status": "open",
+      "managerName": "Dr. Kevin Wu",
+      "managerTitle": "Testing Bench Coordinator",
+      "coordinates": {
+        "lat": 42.3621,
+        "lng": -71.0875,
+        "xPercent": 72,
+        "yPercent": 74
+      }
+    },
+    {
+      "id": "lab-workshop",
+      "name": "Mechanical Workshop (Sample)",
+      "departmentId": "dept-fab",
+      "departmentName": "Making & Workshop",
+      "building": "Sample Foundry",
+      "room": "Bay 03",
+      "accessLevel": "Workshop Safety Training",
+      "capacity": 8,
+      "occupied": 3,
+      "status": "calibrating",
+      "managerName": "Prof. Lucas Meyer",
+      "managerTitle": "Workshop Supervisor",
+      "coordinates": {
+        "lat": 42.3629,
+        "lng": -71.0882,
+        "xPercent": 22,
+        "yPercent": 72
+      }
+    }
+  ],
+  "equipment": [
+    {
+      "id": "eq-arduino-kit",
+      "code": "EC-101",
+      "name": "Arduino Starter Kit",
+      "category": "Electronics & Circuits",
+      "departmentId": "dept-ece",
+      "departmentName": "Electrical & Circuits",
+      "laboratoryId": "lab-electronics",
+      "locationLabel": "Sample Lab · Electronics Lab, Room 104",
+      "status": "available",
+      "hourlyRate": 5,
+      "requiresFacultyApproval": false,
+      "certificationRequired": "General Lab Safety",
+      "biosafetyLevel": "Sample Lab Data",
+      "nextSlotLabel": "Today, 1:00 PM",
+      "lastCalibrated": "Nov 10",
+      "totalBookings": 421,
+      "shortPurpose": "Build quick circuits, sensor prototypes, and LED or motor projects.",
+      "description": "Complete Arduino Uno starter box with breadboard, jumper wires, sensors, servos, and USB cable for class projects and prototypes.",
+      "specsPreview": "Arduino Uno R3 • Breadboard • 20+ Sensors & Motors",
+      "imageUrl": "",
+      "clayTheme": "arduino",
+      "isSampleData": true,
+      "specs": [
+        {
+          "label": "Board",
+          "value": "Arduino Uno R3 (5V)",
+          "icon": "memory",
+          "tone": "mint"
+        },
+        {
+          "label": "Included Parts",
+          "value": "Sensors, LEDs, Servos",
+          "icon": "extension",
+          "tone": "blue"
+        },
+        {
+          "label": "Software",
+          "value": "Arduino IDE (USB)",
+          "icon": "code",
+          "tone": "pink"
+        }
+      ],
+      "guidelines": [
+        {
+          "title": "Check Polarity",
+          "detail": "Double-check 5V and GND wires before plugging in the USB cable.",
+          "icon": "bolt"
+        },
+        {
+          "title": "Pack All Parts",
+          "detail": "Place resistors, jumpers, and boards back into the organizer tray after use.",
+          "icon": "inventory_2"
+        }
+      ]
+    },
+    {
+      "id": "eq-esp32-board",
+      "code": "EC-102",
+      "name": "ESP32 Board",
+      "category": "Electronics & Circuits",
+      "departmentId": "dept-ece",
+      "departmentName": "Electrical & Circuits",
+      "laboratoryId": "lab-electronics",
+      "locationLabel": "Sample Lab · Electronics Lab, Room 104",
+      "status": "available",
+      "hourlyRate": 5,
+      "requiresFacultyApproval": false,
+      "certificationRequired": "General Lab Safety",
+      "biosafetyLevel": "Sample Lab Data",
+      "nextSlotLabel": "Today, 2:00 PM",
+      "lastCalibrated": "Nov 12",
+      "totalBookings": 318,
+      "shortPurpose": "Create wireless Wi-Fi and Bluetooth IoT projects with fast microcontrollers.",
+      "description": "Dual-core Wi-Fi & Bluetooth microcontroller dev board mounted on an easy-access breakout with USB-C.",
+      "specsPreview": "Wi-Fi + Bluetooth • Dual Core • 3.3V Logic",
+      "imageUrl": "",
+      "clayTheme": "esp32",
+      "isSampleData": true,
+      "specs": [
+        {
+          "label": "Wireless",
+          "value": "Wi-Fi & Bluetooth LE",
+          "icon": "wifi",
+          "tone": "blue"
+        },
+        {
+          "label": "Voltage",
+          "value": "3.3V GPIO Pins",
+          "icon": "bolt",
+          "tone": "mint"
+        },
+        {
+          "label": "Connection",
+          "value": "USB-C Programming",
+          "icon": "cable",
+          "tone": "pink"
+        }
+      ],
+      "guidelines": [
+        {
+          "title": "3.3V Pin Limit",
+          "detail": "Never connect 5V sensors directly to ESP32 signal pins without a level shifter.",
+          "icon": "warning"
+        }
+      ]
+    },
+    {
+      "id": "eq-digital-oscilloscope",
+      "code": "EC-103",
+      "name": "Digital Oscilloscope",
+      "category": "Electronics & Circuits",
+      "departmentId": "dept-ece",
+      "departmentName": "Electrical & Circuits",
+      "laboratoryId": "lab-electronics",
+      "locationLabel": "Sample Lab · Electronics Lab, Room 104",
+      "status": "available",
+      "hourlyRate": 15,
+      "requiresFacultyApproval": false,
+      "certificationRequired": "General Lab Safety",
+      "biosafetyLevel": "Sample Lab Data",
+      "nextSlotLabel": "Today, 1:30 PM",
+      "lastCalibrated": "Nov 08",
+      "totalBookings": 512,
+      "shortPurpose": "See voltage signals, waves, and circuit timing live on a color screen.",
+      "description": "4-channel benchtop digital oscilloscope for debugging Arduino/ESP32 signals, audio circuits, and sensor pulses.",
+      "specsPreview": "100 MHz • 4 Analog Channels • Built-in Signal Check",
+      "imageUrl": "",
+      "clayTheme": "oscilloscope",
+      "isSampleData": true,
+      "specs": [
+        {
+          "label": "Channels",
+          "value": "4 Analog Inputs",
+          "icon": "waves",
+          "tone": "pink"
+        },
+        {
+          "label": "Bandwidth",
+          "value": "100 MHz",
+          "icon": "speed",
+          "tone": "blue"
+        },
+        {
+          "label": "Probes",
+          "value": "4× 10x Passive Probes",
+          "icon": "cable",
+          "tone": "mint"
+        }
+      ],
+      "guidelines": [
+        {
+          "title": "Ground Clip Safety",
+          "detail": "Connect probe ground clips only to circuit ground to avoid short circuits.",
+          "icon": "electric_bolt"
+        }
+      ]
+    },
+    {
+      "id": "eq-3d-printer",
+      "code": "MK-201",
+      "name": "3D Printer",
+      "category": "3D Printing & Making",
+      "departmentId": "dept-fab",
+      "departmentName": "Making & Workshop",
+      "laboratoryId": "lab-making",
+      "locationLabel": "Sample Lab · 3D Printing Hub, Room 08",
+      "status": "available",
+      "hourlyRate": 12,
+      "requiresFacultyApproval": false,
+      "certificationRequired": "General Lab Safety",
+      "biosafetyLevel": "Sample Lab Data",
+      "nextSlotLabel": "Today, 3:00 PM",
+      "lastCalibrated": "Nov 14",
+      "totalBookings": 686,
+      "shortPurpose": "Print custom plastic parts, robot brackets, and project cases from CAD files.",
+      "description": "Fast auto-leveling desktop 3D printer supporting PLA and PETG filaments for rapid student prototypes.",
+      "specsPreview": "250 × 210 × 210 mm • PLA & PETG • Auto Bed Level",
+      "imageUrl": "",
+      "clayTheme": "printer",
+      "isSampleData": true,
+      "specs": [
+        {
+          "label": "Print Size",
+          "value": "250 × 210 × 210 mm",
+          "icon": "view_in_ar",
+          "tone": "mint"
+        },
+        {
+          "label": "Materials",
+          "value": "PLA, PETG",
+          "icon": "layers",
+          "tone": "blue"
+        },
+        {
+          "label": "File Type",
+          "value": ".STL / .3MF",
+          "icon": "folder_open",
+          "tone": "pink"
+        }
+      ],
+      "guidelines": [
+        {
+          "title": "Watch First Layer",
+          "detail": "Stay for the first 5 minutes of your print to confirm the first layer sticks cleanly.",
+          "icon": "visibility"
+        }
+      ]
+    },
+    {
+      "id": "eq-laser-cutter",
+      "code": "MK-202",
+      "name": "Laser Cutter",
+      "category": "3D Printing & Making",
+      "departmentId": "dept-fab",
+      "departmentName": "Making & Workshop",
+      "laboratoryId": "lab-making",
+      "locationLabel": "Sample Lab · 3D Printing Hub, Room 08",
+      "status": "in_use",
+      "hourlyRate": 20,
+      "requiresFacultyApproval": true,
+      "certificationRequired": "Laser Safety Briefing",
+      "biosafetyLevel": "Sample Lab Data",
+      "nextSlotLabel": "Tomorrow, 10:00 AM",
+      "lastCalibrated": "Nov 11",
+      "totalBookings": 340,
+      "shortPurpose": "Cut and engrave clean shapes into wood, acrylic sheets, and cardboard.",
+      "description": "Enclosed CO2 laser cutter with exhaust fan for fast, accurate panels, robot chassis plates, and engravings.",
+      "specsPreview": "600 × 400 mm Bed • Wood & Acrylic • Exhaust Filtered",
+      "imageUrl": "",
+      "clayTheme": "laser",
+      "isSampleData": true,
+      "specs": [
+        {
+          "label": "Bed Area",
+          "value": "600 × 400 mm",
+          "icon": "crop_free",
+          "tone": "pink"
+        },
+        {
+          "label": "Materials",
+          "value": "Plywood, Acrylic, Paper",
+          "icon": "layers",
+          "tone": "mint"
+        },
+        {
+          "label": "Design Files",
+          "value": ".SVG / .DXF",
+          "icon": "draw",
+          "tone": "blue"
+        }
+      ],
+      "guidelines": [
+        {
+          "title": "Approved Materials Only",
+          "detail": "Never cut PVC or vinyl. Stay beside the machine at all times while cutting.",
+          "icon": "verified_user"
+        }
+      ]
+    },
+    {
+      "id": "eq-cnc-machine",
+      "code": "MK-203",
+      "name": "CNC Machine",
+      "category": "3D Printing & Making",
+      "departmentId": "dept-fab",
+      "departmentName": "Making & Workshop",
+      "laboratoryId": "lab-making",
+      "locationLabel": "Sample Lab · 3D Printing Hub, Room 08",
+      "status": "available",
+      "hourlyRate": 30,
+      "requiresFacultyApproval": true,
+      "certificationRequired": "CNC Safety Check",
+      "biosafetyLevel": "Sample Lab Data",
+      "nextSlotLabel": "Today, 4:00 PM",
+      "lastCalibrated": "Nov 09",
+      "totalBookings": 210,
+      "shortPurpose": "Carve solid aluminum, wood, or PCB boards using computer-guided cutting tools.",
+      "description": "3-axis desktop & shop CNC router for accurate mechanical brackets, enclosures, and milled parts.",
+      "specsPreview": "3-Axis Router • Aluminum & Wood • Enclosed Guard",
+      "imageUrl": "",
+      "clayTheme": "cnc",
+      "isSampleData": true,
+      "specs": [
+        {
+          "label": "Work Area",
+          "value": "400 × 300 × 120 mm",
+          "icon": "open_with",
+          "tone": "mint"
+        },
+        {
+          "label": "Spindle",
+          "value": "12,000 RPM",
+          "icon": "cyclone",
+          "tone": "blue"
+        },
+        {
+          "label": "Safety",
+          "value": "Full Door Interlock",
+          "icon": "shield",
+          "tone": "pink"
+        }
+      ],
+      "guidelines": [
+        {
+          "title": "Dry Run First",
+          "detail": "Check tool height and run an air pass before cutting solid stock.",
+          "icon": "fact_check"
+        }
+      ]
+    },
+    {
+      "id": "eq-robotic-arm",
+      "code": "RB-301",
+      "name": "Robotic Arm",
+      "category": "Robotics",
+      "departmentId": "dept-rob",
+      "departmentName": "Robotics & Automation",
+      "laboratoryId": "lab-robotics",
+      "locationLabel": "Sample Lab · Robotics Studio, Room 204",
+      "status": "available",
+      "hourlyRate": 25,
+      "requiresFacultyApproval": false,
+      "certificationRequired": "General Lab Safety",
+      "biosafetyLevel": "Sample Lab Data",
+      "nextSlotLabel": "Today, 2:00 PM",
+      "lastCalibrated": "Nov 15",
+      "totalBookings": 294,
+      "shortPurpose": "Program pick-and-place movements, gripper tasks, and ROS motion paths.",
+      "description": "6-axis tabletop collaborative robotic arm with Python/ROS support and soft adaptive gripper.",
+      "specsPreview": "6-Axis • Python & ROS 2 • Adaptive Gripper",
+      "imageUrl": "",
+      "clayTheme": "robot",
+      "isSampleData": true,
+      "specs": [
+        {
+          "label": "Motion",
+          "value": "6-Axis Joint Control",
+          "icon": "precision_manufacturing",
+          "tone": "blue"
+        },
+        {
+          "label": "Coding",
+          "value": "Python / ROS 2",
+          "icon": "terminal",
+          "tone": "mint"
+        },
+        {
+          "label": "Reach",
+          "value": "650 mm Benchtop",
+          "icon": "straighten",
+          "tone": "pink"
+        }
+      ],
+      "guidelines": [
+        {
+          "title": "Keep E-Stop Close",
+          "detail": "Keep the red emergency stop button within reach while testing new robot code.",
+          "icon": "verified_user"
+        }
+      ]
+    },
+    {
+      "id": "eq-mobile-robot",
+      "code": "RB-302",
+      "name": "Mobile Robot Kit",
+      "category": "Robotics",
+      "departmentId": "dept-rob",
+      "departmentName": "Robotics & Automation",
+      "laboratoryId": "lab-robotics",
+      "locationLabel": "Sample Lab · Robotics Studio, Room 204",
+      "status": "available",
+      "hourlyRate": 15,
+      "requiresFacultyApproval": false,
+      "certificationRequired": "General Lab Safety",
+      "biosafetyLevel": "Sample Lab Data",
+      "nextSlotLabel": "Today, 1:00 PM",
+      "lastCalibrated": "Nov 13",
+      "totalBookings": 256,
+      "shortPurpose": "Test self-driving navigation, LiDAR mapping, and obstacle avoidance.",
+      "description": "Wheeled autonomous robot platform equipped with 2D LiDAR scanner, depth camera, and onboard computer.",
+      "specsPreview": "2D LiDAR • Depth Camera • ROS Navigation Ready",
+      "imageUrl": "",
+      "clayTheme": "mobile_robot",
+      "isSampleData": true,
+      "specs": [
+        {
+          "label": "Sensors",
+          "value": "2D LiDAR + Camera",
+          "icon": "sensors",
+          "tone": "mint"
+        },
+        {
+          "label": "Drive",
+          "value": "2WD + Encoders",
+          "icon": "directions_car",
+          "tone": "blue"
+        },
+        {
+          "label": "Battery",
+          "value": "3 hrs Run Time",
+          "icon": "battery_charging_full",
+          "tone": "pink"
+        }
+      ],
+      "guidelines": [
+        {
+          "title": "Floor Arena Only",
+          "detail": "Test autonomous driving inside the padded floor mat area in Room 204.",
+          "icon": "map"
+        }
+      ]
+    },
+    {
+      "id": "eq-line-follower",
+      "code": "RB-303",
+      "name": "Line Follower Kit",
+      "category": "Robotics",
+      "departmentId": "dept-rob",
+      "departmentName": "Robotics & Automation",
+      "laboratoryId": "lab-robotics",
+      "locationLabel": "Sample Lab · Robotics Studio, Room 204",
+      "status": "available",
+      "hourlyRate": 8,
+      "requiresFacultyApproval": false,
+      "certificationRequired": "General Lab Safety",
+      "biosafetyLevel": "Sample Lab Data",
+      "nextSlotLabel": "Today, 11:30 AM",
+      "lastCalibrated": "Nov 14",
+      "totalBookings": 390,
+      "shortPurpose": "Learn PID speed control and IR sensor tracking on a campus test track.",
+      "description": "Beginner-friendly robot car kit with 5-channel IR array, geared DC motors, and rechargeable battery pack.",
+      "specsPreview": "5-Sensor IR Array • Arduino Compatible • Practice Track",
+      "imageUrl": "",
+      "clayTheme": "line_follower",
+      "isSampleData": true,
+      "specs": [
+        {
+          "label": "Sensors",
+          "value": "5× IR Track Sensors",
+          "icon": "linear_scale",
+          "tone": "pink"
+        },
+        {
+          "label": "Controller",
+          "value": "Arduino Nano",
+          "icon": "memory",
+          "tone": "mint"
+        },
+        {
+          "label": "Track",
+          "value": "Included Test Mat",
+          "icon": "route",
+          "tone": "blue"
+        }
+      ],
+      "guidelines": [
+        {
+          "title": "Recharge After Use",
+          "detail": "Switch off the battery pack and plug it into the charging dock when finished.",
+          "icon": "battery_std"
+        }
+      ]
+    },
+    {
+      "id": "eq-engineering-pc",
+      "code": "CS-401",
+      "name": "Engineering PC",
+      "category": "Computers & Software",
+      "departmentId": "dept-cs",
+      "departmentName": "Computing & VR",
+      "laboratoryId": "lab-computing",
+      "locationLabel": "Sample Lab · Computing Studio, Room 302",
+      "status": "available",
+      "hourlyRate": 10,
+      "requiresFacultyApproval": false,
+      "certificationRequired": "General Lab Safety",
+      "biosafetyLevel": "Sample Lab Data",
+      "nextSlotLabel": "Today, 12:00 PM",
+      "lastCalibrated": "Nov 15",
+      "totalBookings": 740,
+      "shortPurpose": "Run CAD modeling, MATLAB simulations, PCB layout, and engineering software.",
+      "description": "High-memory dual-monitor desktop workstation preloaded with SolidWorks, Fusion 360, MATLAB, KiCad, and VS Code.",
+      "specsPreview": "64GB RAM • Dual 27\" Displays • CAD & MATLAB Installed",
+      "imageUrl": "",
+      "clayTheme": "pc",
+      "isSampleData": true,
+      "specs": [
+        {
+          "label": "Memory",
+          "value": "64 GB DDR5 RAM",
+          "icon": "memory",
+          "tone": "blue"
+        },
+        {
+          "label": "Software",
+          "value": "CAD, MATLAB, KiCad",
+          "icon": "apps",
+          "tone": "mint"
+        },
+        {
+          "label": "Displays",
+          "value": "Dual 4K Monitors",
+          "icon": "desktop_windows",
+          "tone": "pink"
+        }
+      ],
+      "guidelines": [
+        {
+          "title": "Save to Cloud Drive",
+          "detail": "Save project files to your student cloud folder before signing out.",
+          "icon": "cloud_upload"
+        }
+      ]
+    },
+    {
+      "id": "eq-gpu-workstation",
+      "code": "CS-402",
+      "name": "GPU Workstation",
+      "category": "Computers & Software",
+      "departmentId": "dept-cs",
+      "departmentName": "Computing & VR",
+      "laboratoryId": "lab-computing",
+      "locationLabel": "Sample Lab · Computing Studio, Room 302",
+      "status": "available",
+      "hourlyRate": 30,
+      "requiresFacultyApproval": true,
+      "certificationRequired": "Cluster Access Check",
+      "biosafetyLevel": "Sample Lab Data",
+      "nextSlotLabel": "Now (Remote or Desk)",
+      "lastCalibrated": "Nov 16",
+      "totalBookings": 530,
+      "shortPurpose": "Train machine learning models, computer vision tools, and 3D renders fast.",
+      "description": "Dedicated deep learning tower with dual high-VRAM GPUs, CUDA toolkit, PyTorch, and TensorFlow.",
+      "specsPreview": "Dual High-VRAM GPUs • 128GB RAM • PyTorch & CUDA",
+      "imageUrl": "",
+      "clayTheme": "gpu",
+      "isSampleData": true,
+      "specs": [
+        {
+          "label": "Graphics",
+          "value": "Dual 24GB VRAM GPUs",
+          "icon": "developer_board",
+          "tone": "pink"
+        },
+        {
+          "label": "AI Stack",
+          "value": "PyTorch, CUDA, Jupyter",
+          "icon": "terminal",
+          "tone": "blue"
+        },
+        {
+          "label": "Access",
+          "value": "In-Lab or Campus SSH",
+          "icon": "lan",
+          "tone": "mint"
+        }
+      ],
+      "guidelines": [
+        {
+          "title": "Save Checkpoints",
+          "detail": "Save training weights regularly so long jobs stay safe if time expires.",
+          "icon": "save"
+        }
+      ]
+    },
+    {
+      "id": "eq-vr-headset",
+      "code": "CS-403",
+      "name": "VR Headset",
+      "category": "Computers & Software",
+      "departmentId": "dept-cs",
+      "departmentName": "Computing & VR",
+      "laboratoryId": "lab-computing",
+      "locationLabel": "Sample Lab · Computing Studio, Room 302",
+      "status": "in_use",
+      "hourlyRate": 15,
+      "requiresFacultyApproval": false,
+      "certificationRequired": "General Lab Safety",
+      "biosafetyLevel": "Sample Lab Data",
+      "nextSlotLabel": "Today, 4:30 PM",
+      "lastCalibrated": "Nov 13",
+      "totalBookings": 215,
+      "shortPurpose": "Test virtual 3D spaces, Unity/Unreal apps, and interactive simulations.",
+      "description": "Standalone & PC-tethered virtual reality headset with hand controllers and dedicated playspace mat.",
+      "specsPreview": "4K Per-Eye • Hand Tracking • Unity & Unreal Ready",
+      "imageUrl": "",
+      "clayTheme": "vr",
+      "isSampleData": true,
+      "specs": [
+        {
+          "label": "Tracking",
+          "value": "6-DOF Inside-Out",
+          "icon": "360",
+          "tone": "mint"
+        },
+        {
+          "label": "Engines",
+          "value": "Unity, Unreal, WebXR",
+          "icon": "view_in_ar",
+          "tone": "blue"
+        },
+        {
+          "label": "Controllers",
+          "value": "2× Haptic Handsets",
+          "icon": "sports_esports",
+          "tone": "pink"
+        }
+      ],
+      "guidelines": [
+        {
+          "title": "Wipe Foam Pad",
+          "detail": "Use the provided sanitizer wipes on the face cushion after each session.",
+          "icon": "cleaning_services"
+        }
+      ]
+    },
+    {
+      "id": "eq-digital-multimeter",
+      "code": "TM-501",
+      "name": "Digital Multimeter",
+      "category": "Testing & Measurement",
+      "departmentId": "dept-ece",
+      "departmentName": "Electrical & Circuits",
+      "laboratoryId": "lab-testing",
+      "locationLabel": "Sample Lab · Testing Bench, Room 112",
+      "status": "available",
+      "hourlyRate": 5,
+      "requiresFacultyApproval": false,
+      "certificationRequired": "General Lab Safety",
+      "biosafetyLevel": "Sample Lab Data",
+      "nextSlotLabel": "Today, 12:30 PM",
+      "lastCalibrated": "Nov 12",
+      "totalBookings": 820,
+      "shortPurpose": "Measure voltage, current, resistance, and check circuit connections safely.",
+      "description": "True-RMS bench & handheld digital multimeter with backlit screen, continuity beep, and fused current inputs.",
+      "specsPreview": "True-RMS • Voltage, Current, Ohms • Continuity Beep",
+      "imageUrl": "",
+      "clayTheme": "multimeter",
+      "isSampleData": true,
+      "specs": [
+        {
+          "label": "Modes",
+          "value": "V, A, Ω, Continuity",
+          "icon": "electric_meter",
+          "tone": "mint"
+        },
+        {
+          "label": "Accuracy",
+          "value": "True-RMS Auto-Range",
+          "icon": "tune",
+          "tone": "blue"
+        },
+        {
+          "label": "Probes",
+          "value": "Alligator + Needle Leads",
+          "icon": "cable",
+          "tone": "pink"
+        }
+      ],
+      "guidelines": [
+        {
+          "title": "Check Probe Jacks",
+          "detail": "Move the red lead back to the V/Ω jack after measuring current to protect fuses.",
+          "icon": "verified_user"
+        }
+      ]
+    },
+    {
+      "id": "eq-vernier-caliper",
+      "code": "TM-502",
+      "name": "Digital Vernier Caliper",
+      "category": "Testing & Measurement",
+      "departmentId": "dept-ece",
+      "departmentName": "Electrical & Circuits",
+      "laboratoryId": "lab-testing",
+      "locationLabel": "Sample Lab · Testing Bench, Room 112",
+      "status": "available",
+      "hourlyRate": 5,
+      "requiresFacultyApproval": false,
+      "certificationRequired": "General Lab Safety",
+      "biosafetyLevel": "Sample Lab Data",
+      "nextSlotLabel": "Today, 12:00 PM",
+      "lastCalibrated": "Nov 15",
+      "totalBookings": 645,
+      "shortPurpose": "Measure small part sizes, hole diameters, and thicknesses down to 0.01 mm.",
+      "description": "Stainless steel digital sliding caliper with instant millimeter/inch toggle and zero reset button.",
+      "specsPreview": "0–150 mm Range • ±0.02 mm Accuracy • mm / inch Switch",
+      "imageUrl": "",
+      "clayTheme": "caliper",
+      "isSampleData": true,
+      "specs": [
+        {
+          "label": "Range",
+          "value": "0 – 150 mm (6 in)",
+          "icon": "straighten",
+          "tone": "blue"
+        },
+        {
+          "label": "Resolution",
+          "value": "0.01 mm / 0.0005 in",
+          "icon": "center_focus_strong",
+          "tone": "mint"
+        },
+        {
+          "label": "Modes",
+          "value": "Outer, Inner & Depth",
+          "icon": "architecture",
+          "tone": "pink"
+        }
+      ],
+      "guidelines": [
+        {
+          "title": "Zero Before Measuring",
+          "detail": "Close the jaws gently and press Zero before taking part measurements.",
+          "icon": "tune"
+        }
+      ]
+    },
+    {
+      "id": "eq-power-supply",
+      "code": "TM-503",
+      "name": "Power Supply",
+      "category": "Testing & Measurement",
+      "departmentId": "dept-ece",
+      "departmentName": "Electrical & Circuits",
+      "laboratoryId": "lab-testing",
+      "locationLabel": "Sample Lab · Testing Bench, Room 112",
+      "status": "available",
+      "hourlyRate": 8,
+      "requiresFacultyApproval": false,
+      "certificationRequired": "General Lab Safety",
+      "biosafetyLevel": "Sample Lab Data",
+      "nextSlotLabel": "Today, 2:30 PM",
+      "lastCalibrated": "Nov 11",
+      "totalBookings": 472,
+      "shortPurpose": "Give steady, adjustable DC voltage and current limits to your circuits.",
+      "description": "Triple-output programmable DC bench power supply with current limiting to protect breadboards from shorts.",
+      "specsPreview": "0–30V DC • 0–5A Current Limit • Digital Readout",
+      "imageUrl": "",
+      "clayTheme": "power_supply",
+      "isSampleData": true,
+      "specs": [
+        {
+          "label": "Output",
+          "value": "0–30V DC (3 Channels)",
+          "icon": "bolt",
+          "tone": "pink"
+        },
+        {
+          "label": "Protection",
+          "value": "Adjustable Current Cap",
+          "icon": "shield",
+          "tone": "mint"
+        },
+        {
+          "label": "Leads",
+          "value": "Banana-to-Clip Cables",
+          "icon": "cable",
+          "tone": "blue"
+        }
+      ],
+      "guidelines": [
+        {
+          "title": "Set Current Limit First",
+          "detail": "Set your voltage and current limit before pressing the Output On button.",
+          "icon": "power_settings_new"
+        }
+      ]
+    },
+    {
+      "id": "eq-lathe-machine",
+      "code": "MW-601",
+      "name": "Lathe Machine",
+      "category": "Mechanical Workshop",
+      "departmentId": "dept-fab",
+      "departmentName": "Making & Workshop",
+      "laboratoryId": "lab-workshop",
+      "locationLabel": "Sample Lab · Mechanical Workshop, Bay 03",
+      "status": "available",
+      "hourlyRate": 35,
+      "requiresFacultyApproval": true,
+      "certificationRequired": "Workshop Safety Training",
+      "biosafetyLevel": "Sample Lab Data",
+      "nextSlotLabel": "Tomorrow, 9:00 AM",
+      "lastCalibrated": "Nov 07",
+      "totalBookings": 164,
+      "shortPurpose": "Spin and shape smooth round metal rods, shafts, threads, and bushings.",
+      "description": "Precision benchtop metal lathe with variable spindle speed, digital readout, and safety chuck guard.",
+      "specsPreview": "Variable RPM • Digital Readout • Safety Chuck Shield",
+      "imageUrl": "",
+      "clayTheme": "lathe",
+      "isSampleData": true,
+      "specs": [
+        {
+          "label": "Swing",
+          "value": "250 mm Over Bed",
+          "icon": "cyclone",
+          "tone": "mint"
+        },
+        {
+          "label": "Speed",
+          "value": "100–2500 RPM",
+          "icon": "speed",
+          "tone": "blue"
+        },
+        {
+          "label": "Safety",
+          "value": "Goggles & Guard Required",
+          "icon": "shield",
+          "tone": "pink"
+        }
+      ],
+      "guidelines": [
+        {
+          "title": "Remove Chuck Key",
+          "detail": "Never leave the chuck key inside the chuck. Tie back hair and wear safety glasses.",
+          "icon": "warning"
+        }
+      ]
+    },
+    {
+      "id": "eq-milling-machine",
+      "code": "MW-602",
+      "name": "Milling Machine",
+      "category": "Mechanical Workshop",
+      "departmentId": "dept-fab",
+      "departmentName": "Making & Workshop",
+      "laboratoryId": "lab-workshop",
+      "locationLabel": "Sample Lab · Mechanical Workshop, Bay 03",
+      "status": "maintenance",
+      "hourlyRate": 35,
+      "requiresFacultyApproval": true,
+      "certificationRequired": "Workshop Safety Training",
+      "biosafetyLevel": "Sample Lab Data",
+      "nextSlotLabel": "Thu, 1:00 PM",
+      "lastCalibrated": "Nov 04",
+      "totalBookings": 148,
+      "shortPurpose": "Cut flat surfaces, slots, and precise holes into aluminum or steel blocks.",
+      "description": "Vertical manual & DRO knee milling machine for heavy-duty brackets, slotted mounts, and flat stock.",
+      "specsPreview": "3-Axis DRO • Precision Vise • Safety Shield",
+      "imageUrl": "",
+      "clayTheme": "mill",
+      "isSampleData": true,
+      "specs": [
+        {
+          "label": "Table Travel",
+          "value": "450 × 200 mm",
+          "icon": "open_with",
+          "tone": "blue"
+        },
+        {
+          "label": "Readout",
+          "value": "3-Axis Digital Scale",
+          "icon": "straighten",
+          "tone": "mint"
+        },
+        {
+          "label": "Holding",
+          "value": "6-Inch Precision Vise",
+          "icon": "build",
+          "tone": "pink"
+        }
+      ],
+      "guidelines": [
+        {
+          "title": "Lock Unused Axes",
+          "detail": "Clamp your workpiece tightly in the vise and lock idle table axes before cutting.",
+          "icon": "fact_check"
+        }
+      ]
+    },
+    {
+      "id": "eq-drill-press",
+      "code": "MW-603",
+      "name": "Drill Press",
+      "category": "Mechanical Workshop",
+      "departmentId": "dept-fab",
+      "departmentName": "Making & Workshop",
+      "laboratoryId": "lab-workshop",
+      "locationLabel": "Sample Lab · Mechanical Workshop, Bay 03",
+      "status": "available",
+      "hourlyRate": 15,
+      "requiresFacultyApproval": false,
+      "certificationRequired": "Workshop Safety Briefing",
+      "biosafetyLevel": "Sample Lab Data",
+      "nextSlotLabel": "Today, 3:30 PM",
+      "lastCalibrated": "Nov 14",
+      "totalBookings": 405,
+      "shortPurpose": "Drill straight, accurate holes in wood, plastic plates, and metal parts.",
+      "description": "Floor-standing variable-speed drill press with laser center guide, depth stop, and table vise.",
+      "specsPreview": "16-Speed • Laser Crosshair • Depth Stop & Vise",
+      "imageUrl": "",
+      "clayTheme": "drill_press",
+      "isSampleData": true,
+      "specs": [
+        {
+          "label": "Chuck Size",
+          "value": "1.5 – 16 mm Bits",
+          "icon": "build",
+          "tone": "pink"
+        },
+        {
+          "label": "Guide",
+          "value": "Laser Center Dot",
+          "icon": "gps_fixed",
+          "tone": "mint"
+        },
+        {
+          "label": "Table",
+          "value": "Tilting + Clamp Slots",
+          "icon": "layers",
+          "tone": "blue"
+        }
+      ],
+      "guidelines": [
+        {
+          "title": "Always Clamp Parts",
+          "detail": "Never hold small metal or plastic parts by hand while drilling—always use a clamp.",
+          "icon": "verified_user"
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-arduino",
+      "ownerId": "usr-alex",
+      "ownerName": "Alex Rivera",
+      "title": "Smart Weather Sensor Node",
+      "grantCode": "EE-101",
+      "department": "Electrical & Circuits",
+      "category": "Electronics & Circuits",
+      "description": "Build and test a solar-powered temperature and air sensor node using ESP32 and Arduino.",
+      "deadline": "2026-11-25",
+      "progress": 78,
+      "tone": "mint",
+      "icon": "memory",
+      "recommendedEquipmentIds": [
+        "eq-arduino-kit",
+        "eq-esp32-board",
+        "eq-digital-oscilloscope"
+      ],
+      "aiAnalysisSummary": "Great fit for ESP32 Board, Digital Oscilloscope, and Power Supply testing.",
+      "status": "active"
+    },
+    {
+      "id": "proj-rover",
+      "ownerId": "usr-alex",
+      "ownerName": "Alex Rivera",
+      "title": "Campus Delivery Robot",
+      "grantCode": "ROBO-22",
+      "department": "Robotics & Automation",
+      "category": "Robotics",
+      "description": "3D-print custom sensor mounts and test autonomous navigation on the studio floor.",
+      "deadline": "2026-11-28",
+      "progress": 52,
+      "tone": "blue",
+      "icon": "precision_manufacturing",
+      "recommendedEquipmentIds": [
+        "eq-3d-printer",
+        "eq-mobile-robot",
+        "eq-robotic-arm"
+      ],
+      "aiAnalysisSummary": "Use 3D Printer for brackets and Mobile Robot Kit for LiDAR path testing.",
+      "status": "active"
+    },
+    {
+      "id": "proj-gripper",
+      "ownerId": "usr-alex",
+      "ownerName": "Alex Rivera",
+      "title": "Lightweight Arm Gripper",
+      "grantCode": "MECH-09",
+      "department": "Making & Workshop",
+      "category": "Mechanical Workshop",
+      "description": "Machine aluminum links and verify tolerances with digital calipers before assembly.",
+      "deadline": "2026-11-30",
+      "progress": 90,
+      "tone": "pink",
+      "icon": "build",
+      "recommendedEquipmentIds": [
+        "eq-cnc-machine",
+        "eq-vernier-caliper",
+        "eq-drill-press"
+      ],
+      "aiAnalysisSummary": "Pair CNC Machine cutting with Digital Vernier Caliper checks.",
+      "status": "active"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "bk-1795429127879",
+      "equipmentId": "eq-arduino-kit",
+      "equipmentName": "Arduino Starter Kit",
+      "userId": "usr-alex",
+      "userName": "Alex Rivera",
+      "userRoleTitle": "Graduate Researcher • Bioengineering",
+      "projectId": "",
+      "projectTitle": "General Lab Research",
+      "date": "2099-05-15",
+      "startHour": 10,
+      "durationHours": 2,
+      "status": "cancelled",
+      "totalCost": 10,
+      "createdAt": "2026-11-23T10:18:47.879Z"
+    },
+    {
+      "id": "bk-1795428821812",
+      "equipmentId": "eq-3d-printer",
+      "equipmentName": "3D Printer",
+      "userId": "usr-alex",
+      "userName": "Alex Rivera",
+      "userRoleTitle": "Graduate Researcher • Bioengineering",
+      "projectId": "proj-rover",
+      "projectTitle": "Campus Delivery Robot (ROBO-22)",
+      "date": "2026-11-23",
+      "startHour": 11,
+      "durationHours": 2,
+      "status": "confirmed",
+      "totalCost": 24,
+      "createdAt": "2026-11-23T10:13:41.812Z"
+    },
+    {
+      "id": "bk-101",
+      "equipmentId": "eq-arduino-kit",
+      "equipmentName": "Arduino Starter Kit",
+      "userId": "usr-alex",
+      "userName": "Alex Rivera",
+      "userRoleTitle": "Student Researcher • Bioengineering",
+      "projectId": "proj-arduino",
+      "projectTitle": "Smart Weather Sensor Node (EE-101)",
+      "date": "2026-11-23",
+      "startHour": 14,
+      "durationHours": 2,
+      "status": "confirmed",
+      "totalCost": 10,
+      "facultyReviewerName": "Dr. Elena Rostova",
+      "createdAt": "2026-11-23T09:55:54.381Z"
+    },
+    {
+      "id": "bk-102",
+      "equipmentId": "eq-robotic-arm",
+      "equipmentName": "Robotic Arm",
+      "userId": "usr-alex",
+      "userName": "Alex Rivera",
+      "userRoleTitle": "Student Researcher • Bioengineering",
+      "projectId": "proj-rover",
+      "projectTitle": "Campus Delivery Robot (ROBO-22)",
+      "date": "2026-11-24",
+      "startHour": 9,
+      "durationHours": 3,
+      "status": "confirmed",
+      "totalCost": 75,
+      "createdAt": "2026-11-23T09:55:54.381Z"
+    },
+    {
+      "id": "bk-201",
+      "equipmentId": "eq-laser-cutter",
+      "equipmentName": "Laser Cutter",
+      "userId": "usr-maya",
+      "userName": "Maya Lin",
+      "userRoleTitle": "PhD Candidate • Materials Science",
+      "projectId": "proj-rover",
+      "projectTitle": "Acrylic Sensor Enclosure",
+      "date": "2026-11-25",
+      "startHour": 14,
+      "durationHours": 2,
+      "status": "confirmed",
+      "totalCost": 40,
+      "urgencyTag": "Urgent",
+      "aiNote": "No overlaps found. Laser Safety Briefing is already on file.",
+      "createdAt": "2026-11-23T09:55:54.381Z",
+      "facultyReviewerName": "Dr. Elena Rostova"
+    },
+    {
+      "id": "bk-202",
+      "equipmentId": "eq-cnc-machine",
+      "equipmentName": "CNC Machine",
+      "userId": "usr-liam",
+      "userName": "Liam Vance",
+      "userRoleTitle": "M.S. Researcher • Mechanical",
+      "projectId": "proj-gripper",
+      "projectTitle": "Aluminum Motor Mounts",
+      "date": "2026-11-25",
+      "startHour": 9,
+      "durationHours": 2,
+      "status": "confirmed",
+      "totalCost": 60,
+      "urgencyTag": "Routine",
+      "aiNote": "Spindle warm-up window is free at 09:00. Good open slot.",
+      "createdAt": "2026-11-23T09:55:54.381Z",
+      "facultyReviewerName": "Dr. Elena Rostova"
+    },
+    {
+      "id": "bk-203",
+      "equipmentId": "eq-gpu-workstation",
+      "equipmentName": "GPU Workstation",
+      "userId": "usr-maya",
+      "userName": "Maya Lin",
+      "userRoleTitle": "PhD Candidate • Materials Science",
+      "projectId": "proj-arduino",
+      "projectTitle": "Vision Model Training Run",
+      "date": "2026-11-26",
+      "startHour": 13,
+      "durationHours": 3,
+      "status": "confirmed",
+      "totalCost": 90,
+      "urgencyTag": "Certified",
+      "aiNote": "Remote SSH access verified and 128GB RAM is open.",
+      "createdAt": "2026-11-23T09:55:54.381Z",
+      "facultyReviewerName": "Dr. Elena Rostova"
+    },
+    {
+      "id": "bk-301",
+      "equipmentId": "eq-3d-printer",
+      "equipmentName": "3D Printer",
+      "userId": "usr-maya",
+      "userName": "Maya Lin",
+      "userRoleTitle": "PhD Candidate • Materials Science",
+      "projectId": "proj-rover",
+      "projectTitle": "Bracket Prototype v2",
+      "date": "2026-11-23",
+      "startHour": 8,
+      "durationHours": 2,
+      "status": "confirmed",
+      "totalCost": 24,
+      "createdAt": "2026-11-23T09:55:54.381Z"
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "fs-7880",
+      "caseCode": "CASE #FS-7880",
+      "equipmentId": "eq-arduino-kit",
+      "equipmentName": "Arduino Starter Kit",
+      "bayLabel": "Sample Lab · Electronics Lab, Room 104",
+      "date": "2099-05-15",
+      "conflictStartHour": 11,
+      "conflictEndHour": 13,
+      "status": "open",
+      "fairnessScore": 94,
+      "headlineRecommendation": "Keep Maya Lin in 11:00–13:00 & move Alex Rivera to 2099-05-15, 08:00 – 10:00",
+      "explanation": "Maya Lin scored 69/100 vs Alex Rivera's 54/100 across deadline urgency, weekly quota fairness, safety training match, and project fit. A real conflict-free slot (2099-05-15, 08:00 – 10:00 on Arduino Starter Kit) is available for Alex Rivera. Faculty make the final approval decision.",
+      "candidates": [
+        {
+          "bookingId": "req-fs-7880",
+          "studentId": "usr-maya",
+          "studentName": "Maya Lin",
+          "studentInitials": "ML",
+          "studentTitle": "PhD Candidate • Materials Science",
+          "projectTitle": "General Lab Research",
+          "deadlineDescription": "No project deadline attached",
+          "hoursUntilDeadline": 168,
+          "priorityScore": 69,
+          "weeklyUsedHours": 2,
+          "weeklyQuotaHours": 6,
+          "requestedStartHour": 11,
+          "requestedDurationHours": 2,
+          "recommended": true,
+          "scoreBreakdown": {
+            "deadlineScore": 13,
+            "fairnessScore": 17,
+            "compatibilityScore": 18,
+            "availabilityScore": 16,
+            "requirementScore": 5
+          }
+        },
+        {
+          "bookingId": "bk-1795429127879",
+          "studentId": "usr-alex",
+          "studentName": "Alex Rivera",
+          "studentInitials": "AR",
+          "studentTitle": "Graduate Researcher • Bioengineering",
+          "projectTitle": "General Lab Research",
+          "deadlineDescription": "No project deadline attached",
+          "hoursUntilDeadline": 168,
+          "priorityScore": 54,
+          "weeklyUsedHours": 6.5,
+          "weeklyQuotaHours": 6,
+          "requestedStartHour": 10,
+          "requestedDurationHours": 2,
+          "recommended": false,
+          "scoreBreakdown": {
+            "deadlineScore": 13,
+            "fairnessScore": 2,
+            "compatibilityScore": 18,
+            "availabilityScore": 16,
+            "requirementScore": 5
+          }
+        }
+      ],
+      "factors": [
+        {
+          "title": "Deadline Urgency",
+          "icon": "schedule",
+          "tone": "mint",
+          "detail": "Maya Lin: 13/28 pts (No project deadline attached)."
+        },
+        {
+          "title": "Quota Fairness",
+          "icon": "balance",
+          "tone": "blue",
+          "detail": "Maya Lin used 2.0h/6h vs Alex Rivera's 6.5h/6h."
+        },
+        {
+          "title": "Safety & Tool Fit",
+          "icon": "verified_user",
+          "tone": "pink",
+          "detail": "Compatible cert & real open window found: 2099-05-15, 08:00 – 10:00."
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "alt-1",
+          "badge": "Same Day Open",
+          "score": 92,
+          "timeLabel": "2099-05-15, 08:00 – 10:00",
+          "date": "2099-05-15",
+          "startHour": 8,
+          "durationHours": 2,
+          "equipmentId": "eq-arduino-kit",
+          "equipmentName": "Arduino Starter Kit",
+          "bayLabel": "Sample Lab · Electronics Lab, Room 104",
+          "rationale": "Confirmed free window on Arduino Starter Kit today with zero conflicting bookings."
+        },
+        {
+          "id": "alt-2",
+          "badge": "Compatible Tool",
+          "score": 90,
+          "timeLabel": "2099-05-15, 10:00 – 12:00",
+          "date": "2099-05-15",
+          "startHour": 10,
+          "durationHours": 2,
+          "equipmentId": "eq-esp32-board",
+          "equipmentName": "ESP32 Board",
+          "bayLabel": "Sample Lab · Electronics Lab, Room 104",
+          "rationale": "Keeps your exact 10:00 time on ESP32 Board (Electronics & Circuits)."
+        },
+        {
+          "id": "alt-3",
+          "badge": "Next Day Open",
+          "score": 85,
+          "timeLabel": "2099-05-16, 09:00 – 11:00",
+          "date": "2099-05-16",
+          "startHour": 9,
+          "durationHours": 2,
+          "equipmentId": "eq-arduino-kit",
+          "equipmentName": "Arduino Starter Kit",
+          "bayLabel": "Sample Lab · Electronics Lab, Room 104",
+          "rationale": "Open 2h window on Arduino Starter Kit (2099-05-16) with verified availability."
+        }
+      ],
+      "timelineBlocks": [
+        {
+          "hourLabel": "08:00",
+          "startHour": 8,
+          "label": "Suggested Slot",
+          "kind": "ai_suggested"
+        },
+        {
+          "hourLabel": "10:00",
+          "startHour": 10,
+          "label": "Alex",
+          "kind": "booked"
+        },
+        {
+          "hourLabel": "12:00",
+          "startHour": 12,
+          "label": "Conflict (2)",
+          "kind": "conflict"
+        },
+        {
+          "hourLabel": "14:00",
+          "startHour": 14,
+          "label": "Open",
+          "kind": "open"
+        },
+        {
+          "hourLabel": "16:00",
+          "startHour": 16,
+          "label": "Open",
+          "kind": "open"
+        },
+        {
+          "hourLabel": "18:00",
+          "startHour": 18,
+          "label": "Open",
+          "kind": "open"
+        }
+      ],
+      "selectedAlternativeId": "alt-1"
+    },
+    {
+      "id": "fs-2048",
+      "caseCode": "CASE #FS-2048",
+      "equipmentId": "eq-cnc-machine",
+      "equipmentName": "CNC Machine",
+      "bayLabel": "Room 08",
+      "date": "2026-11-23",
+      "conflictStartHour": 14,
+      "conflictEndHour": 16,
+      "status": "open",
+      "fairnessScore": 96,
+      "headlineRecommendation": "Keep Maya Lin in 14:00–16:00 & move Liam Vance to 16:30–18:30",
+      "explanation": "Maya has a class demo tomorrow morning and has used less weekly workshop time. Moving Liam to 16:30 keeps both projects on track with zero tool changes.",
+      "candidates": [
+        {
+          "bookingId": "bk-fs-maya",
+          "studentId": "usr-maya",
+          "studentName": "Maya Lin",
+          "studentInitials": "ML",
+          "studentTitle": "PhD Candidate • Materials Science",
+          "projectTitle": "Sensor Bracket Prototype",
+          "deadlineDescription": "Demo due tomorrow at 08:00 AM.",
+          "hoursUntilDeadline": 18,
+          "priorityScore": 94,
+          "weeklyUsedHours": 2,
+          "weeklyQuotaHours": 6,
+          "requestedStartHour": 14,
+          "requestedDurationHours": 2,
+          "recommended": true
+        },
+        {
+          "bookingId": "bk-fs-liam",
+          "studentId": "usr-liam",
+          "studentName": "Liam Vance",
+          "studentInitials": "LV",
+          "studentTitle": "M.S. Researcher • Mechanical",
+          "projectTitle": "Robotic Arm Mounting Plate",
+          "deadlineDescription": "Lab milestone due in 5 days.",
+          "hoursUntilDeadline": 120,
+          "priorityScore": 72,
+          "weeklyUsedHours": 4.5,
+          "weeklyQuotaHours": 6,
+          "requestedStartHour": 14,
+          "requestedDurationHours": 2,
+          "recommended": false
+        }
+      ],
+      "factors": [
+        {
+          "title": "Closer Deadline",
+          "icon": "bolt",
+          "tone": "mint",
+          "detail": "Maya’s demo is in 18 hours while Liam has 5 days left."
+        },
+        {
+          "title": "Fair Weekly Hours",
+          "icon": "balance",
+          "tone": "blue",
+          "detail": "Maya has 4.0h remaining this week; Liam has 1.5h left."
+        },
+        {
+          "title": "Same Setup",
+          "icon": "tune",
+          "tone": "pink",
+          "detail": "The 16:30 slot keeps the same aluminum tool bit loaded."
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "alt-1",
+          "badge": "Best Match",
+          "score": 96,
+          "timeLabel": "Today, 16:30 – 18:30",
+          "date": "2026-11-23",
+          "startHour": 16,
+          "durationHours": 2,
+          "equipmentId": "eq-cnc-machine",
+          "equipmentName": "CNC Machine",
+          "bayLabel": "Room 08",
+          "rationale": "Finish today right after Maya’s run with no setup change."
+        },
+        {
+          "id": "alt-2",
+          "badge": "Next Tool",
+          "score": 89,
+          "timeLabel": "Today, 14:00 – 16:00",
+          "date": "2026-11-23",
+          "startHour": 14,
+          "durationHours": 2,
+          "equipmentId": "eq-lathe-machine",
+          "equipmentName": "Lathe Machine",
+          "bayLabel": "Bay 03",
+          "rationale": "Same afternoon time in the Mechanical Workshop."
+        },
+        {
+          "id": "alt-3",
+          "badge": "Next Morning",
+          "score": 84,
+          "timeLabel": "Tomorrow, 09:00 – 11:00",
+          "date": "2026-11-24",
+          "startHour": 9,
+          "durationHours": 2,
+          "equipmentId": "eq-cnc-machine",
+          "equipmentName": "CNC Machine",
+          "bayLabel": "Room 08",
+          "rationale": "Fresh morning session with plenty of time before deadline."
+        }
+      ],
+      "timelineBlocks": [
+        {
+          "hourLabel": "08:00",
+          "startHour": 8,
+          "label": "Dr. Patel",
+          "kind": "booked"
+        },
+        {
+          "hourLabel": "10:00",
+          "startHour": 10,
+          "label": "Check",
+          "kind": "booked"
+        },
+        {
+          "hourLabel": "12:00",
+          "startHour": 12,
+          "label": "Open",
+          "kind": "open"
+        },
+        {
+          "hourLabel": "14:00",
+          "startHour": 14,
+          "label": "Conflict (2)",
+          "kind": "conflict"
+        },
+        {
+          "hourLabel": "16:00",
+          "startHour": 16,
+          "label": "Liam (Smart)",
+          "kind": "ai_suggested"
+        },
+        {
+          "hourLabel": "18:00",
+          "startHour": 18,
+          "label": "Open",
+          "kind": "open"
+        }
+      ],
+      "selectedAlternativeId": "alt-1"
+    }
+  ],
+  "maintenance": [
+    {
+      "id": "mnt-1",
+      "equipmentId": "eq-3d-printer",
+      "equipmentName": "3D Printer",
+      "technician": "Prof. Lucas Meyer",
+      "taskTitle": "Nozzle & Bed Level Check",
+      "status": "cleared",
+      "scheduledDate": "2026-11-23",
+      "notes": "First-layer calibration passed."
+    },
+    {
+      "id": "mnt-2",
+      "equipmentId": "eq-cnc-machine",
+      "equipmentName": "CNC Machine",
+      "technician": "R. Gomez",
+      "taskTitle": "Spindle Bit Inspection",
+      "status": "scheduled",
+      "scheduledDate": "2026-11-25",
+      "notes": "Routine 20-minute morning check."
+    },
+    {
+      "id": "mnt-3",
+      "equipmentId": "eq-milling-machine",
+      "equipmentName": "Milling Machine",
+      "technician": "M. Alvarez",
+      "taskTitle": "Axis Lubrication & Guard Check",
+      "status": "in_progress",
+      "scheduledDate": "2026-11-23",
+      "notes": "Scheduled to reopen Thursday afternoon."
+    }
+  ],
+  "notifications": [
+    {
+      "id": "ntf-1795429127879",
+      "userId": "usr-alex",
+      "title": "Reservation Confirmed",
+      "message": "Arduino Starter Kit • 2099-05-15 at 10:00 (2h).",
+      "type": "confirmed",
+      "read": false,
+      "createdAt": "2026-11-23T10:18:47.879Z"
+    },
+    {
+      "id": "ntf-1795428878550",
+      "userId": "usr-maya",
+      "title": "Faculty Approved Reservation",
+      "message": "Laser Cutter (2026-11-25) reviewed by Dr. Elena Rostova.",
+      "type": "confirmed",
+      "read": false,
+      "createdAt": "2026-11-23T10:14:38.550Z"
+    },
+    {
+      "id": "ntf-1795428873941",
+      "userId": "usr-liam",
+      "title": "Faculty Approved Reservation",
+      "message": "CNC Machine (2026-11-25) reviewed by Dr. Elena Rostova.",
+      "type": "confirmed",
+      "read": false,
+      "createdAt": "2026-11-23T10:14:33.941Z"
+    },
+    {
+      "id": "ntf-1795428871347",
+      "userId": "usr-maya",
+      "title": "Faculty Approved Reservation",
+      "message": "GPU Workstation (2026-11-26) reviewed by Dr. Elena Rostova.",
+      "type": "confirmed",
+      "read": false,
+      "createdAt": "2026-11-23T10:14:31.347Z"
+    },
+    {
+      "id": "ntf-1795428821812",
+      "userId": "usr-alex",
+      "title": "Reservation Confirmed",
+      "message": "3D Printer • 2026-11-23 at 11:00 (2h).",
+      "type": "confirmed",
+      "read": false,
+      "createdAt": "2026-11-23T10:13:41.812Z"
+    },
+    {
+      "id": "ntf-1",
+      "userId": "usr-alex",
+      "title": "Arduino Starter Kit Confirmed",
+      "message": "Booked for Electronics Lab, Room 104 • Today 2:00 PM – 4:00 PM.",
+      "type": "confirmed",
+      "read": false,
+      "createdAt": "2026-11-23T09:10:54.382Z"
+    },
+    {
+      "id": "ntf-2",
+      "userId": "usr-alex",
+      "title": "Safety Training Active",
+      "message": "General Lab Safety verified for Spring Semester.",
+      "type": "info",
+      "read": false,
+      "createdAt": "2026-11-23T04:55:54.382Z"
+    },
+    {
+      "id": "ntf-3",
+      "userId": "usr-elena",
+      "title": "Booking Conflict #FS-2048 Ready",
+      "message": "CNC Machine overlap between Maya Lin & Liam Vance has a suggested alternative.",
+      "type": "ai",
+      "read": false,
+      "createdAt": "2026-11-23T09:35:54.382Z"
+    }
+  ],
+  "accessRequests": []
+}

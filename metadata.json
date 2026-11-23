@@ -1,0 +1,8 @@
+{
+  "name": "LabLink",
+  "description": "AI-powered campus laboratory resource-sharing platform with Claymorphism design, interactive Motion system, FairSlot conflict arbitration, and Gemini intelligence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

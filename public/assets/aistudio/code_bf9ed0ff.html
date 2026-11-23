@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Plus+Jakarta+Sans:wght@600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-tint":"#29695a","surface-variant":"#e7e2d7","surface-dim":"#dedacf","primary-fixed":"#afefdc","surface":"#fef9ee","background":"#fef9ee","secondary-container":"#b0e4fd","inverse-primary":"#94d3c1","surface-container-highest":"#e7e2d7","secondary-fixed-dim":"#9acee6","outline":"#707975","primary":"#29695a","outline-variant":"#bfc9c4","tertiary-fixed":"#ffd9e0","tertiary-container":"#ffcfd9","error-container":"#ffdad6","on-primary":"#ffffff","primary-fixed-dim":"#94d3c1","on-error-container":"#93000a","inverse-on-surface":"#f5f0e5","on-surface-variant":"#3f4945","on-primary-fixed-variant":"#075043","secondary-fixed":"#bce9ff","on-error":"#ffffff","on-tertiary-fixed-variant":"#673946","primary-container":"#a8e8d5","on-tertiary":"#ffffff","surface-container-low":"#f8f3e8","on-primary-fixed":"#002019","secondary":"#2f6579","surface-container":"#f2ede2","on-tertiary-fixed":"#340e1b","on-primary-container":"#2b6a5b","surface-container-high":"#ede8dd","on-background":"#1d1c15","on-secondary-fixed-variant":"#114d61","inverse-surface":"#323029","on-tertiary-container":"#84515e","on-surface":"#1d1c15","on-secondary-container":"#32677c","on-secondary-fixed":"#001f29","tertiary":"#82505d","on-secondary":"#ffffff","surface-bright":"#fef9ee","surface-container-lowest":"#ffffff","error":"#ba1a1a","tertiary-fixed-dim":"#f5b5c4"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{"space-md":"1rem","space-xl":"2.5rem","space-lg":"1.5rem","margin":"2rem","gutter":"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem"},"fontFamily":{"headline-md":["Plus Jakarta Sans"],"body-md":["Inter"],"body-lg":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"label-lg":["Inter"],"label-md":["Inter"],"headline-lg":["Plus Jakarta Sans"],"label-sm":["Inter"],"headline-sm":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"body-sm":["Inter"],"display-lg":["Plus Jakarta Sans"]},"fontSize":{"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"600"}],"title-md":["18px",{"lineHeight":"26px","fontWeight":"600"}],"display-lg-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"display-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 z-50 p-space-md pointer-events-none"><div class="h-full w-full bg-surface-container-lowest rounded-lg shadow-[0_12px_28px_-6px_rgba(38,48,68,0.08),inset_0_2px_4px_rgba(255,255,255,0.85),inset_0_-4px_8px_rgba(38,48,68,0.04)] flex flex-col py-space-lg px-space-md pointer-events-auto"><div class="px-space-sm mb-space-lg"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Workspace</span></div><nav class="flex-1 flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-full shadow-[0_4px_12px_rgba(41,105,90,0.12),inset_0_2px_4px_rgba(255,255,255,0.7)]"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-full font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-full font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="discover" href="#"><span class="material-symbols-outlined text-[20px]">explore</span><span>Discover</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-full font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="my-reservations" href="#"><span class="material-symbols-outlined text-[20px]">calendar_month</span><span>My Reservations</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-full font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="projects" href="#"><span class="material-symbols-outlined text-[20px]">science</span><span>Projects</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-all bg-primary-container text-on-primary-container font-semibold rounded-full shadow-[0_4px_12px_rgba(41,105,90,0.12),inset_0_2px_4px_rgba(255,255,255,0.7)]" data-path="approvals" href="#"><span class="material-symbols-outlined text-[20px]">verified</span><span>Approvals</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-full font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="lab-map" href="#"><span class="material-symbols-outlined text-[20px]">map</span><span>Lab Map</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-full font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Settings</span></a></nav></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 z-40 px-margin pt-space-md pointer-events-none"><div class="h-16 w-full bg-surface-container-lowest/90 backdrop-blur-xl rounded-full shadow-[0_12px_28px_-6px_rgba(38,48,68,0.08),inset_0_2px_4px_rgba(255,255,255,0.85),inset_0_-4px_8px_rgba(38,48,68,0.04)] px-space-lg flex items-center justify-between pointer-events-auto"><div class="flex items-center gap-space-sm"><img alt="LabLink Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbSeMT7hyR5scS9kihc-CsQttAqViG3mMmhMK9-dVN0N2tmyVDo55HXJbbgznJDYKxUNn7X8_ckNA5r-Giiul4vUfvPq-6aeaW_WveGHGHmQpkn7V6c5gfK4-k4FTt3zyt2KHvj5okbOveMv043sKw_nqN5lRMS2B2R4oPtfUk36Z0bK56PuuNU2_r81MUVYtkzq0N_Ab0jPjYV4Qpt0y9YyEoM7FyHh7c_T_-vNM"/><span class="font-title-md text-title-md text-on-surface">LabLink</span></div><nav class="hidden md:flex items-center gap-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-full"><a class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="explore" href="#">Explore</a><a class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="my-projects" href="#">My Projects</a><a class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="bookings" href="#">Bookings</a><a class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="ai-assistant" href="#">AI Assistant</a></nav><div class="flex items-center gap-space-sm bg-surface-container-low rounded-full pl-space-md pr-space-xs py-space-xs shadow-[inset_0_2px_4px_rgba(38,48,68,0.04)]"><span class="font-label-lg text-label-lg text-on-surface">Alex</span><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 w-full px-margin pb-space-xl bg-surface"><div class="flex flex-col w-full gap-space-xl">
+<section class="flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">01 / Faculty Review Queue</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Spring Semester</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Pending Approval Requests</h2>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="bg-surface-container-lowest rounded-full px-space-md py-space-xs shadow-[0_12px_28px_-6px_rgba(38,48,68,0.08),inset_0_2px_4px_rgba(255,255,255,0.85),inset_0_-4px_8px_rgba(38,48,68,0.04)] flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="font-label-lg text-label-lg text-on-surface" id="pending-count">3 Pending</span>
+</div>
+<button class="bg-surface-container-low hover:bg-surface-container-lowest rounded-full px-space-md py-space-xs font-label-md text-label-md text-on-surface-variant shadow-[inset_0_2px_4px_rgba(38,48,68,0.04)] transition-all active:scale-95" onclick="resetApprovals()" type="button">
+          Reset Demo
+        </button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter" id="approval-list">
+<article class="approval-card bg-surface-container-lowest rounded-lg p-space-lg shadow-[0_12px_28px_-6px_rgba(38,48,68,0.08),inset_0_2px_4px_rgba(255,255,255,0.85),inset_0_-4px_8px_rgba(38,48,68,0.04)] flex flex-col justify-between gap-space-lg transition-all duration-300">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<img class="w-12 h-12 rounded-full object-cover shrink-0 shadow-[0_4px_10px_rgba(38,48,68,0.08)]" data-alt="Portrait of a female graduate student in a modern university biology lab, wearing a crisp white lab coat over casual attire, warm natural daylight, soft cream and mint pastel background tones, approachable and focused expression, photorealistic editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWXFlEp8uZ2orIeRQyvsy8OVjH7brrEPtFglbpwHRGo-H5sPQ9ZoY4sPnLyiro8FIoeXkZlkc5lRqhXHk1Piu2yFasTYO9_bmcpWhHKj99bmUEmTzarnvO2HiwsUR6fzBsL_WU1QNQZ2ZabrgxLW4G7JsfgAee1IUfR41zEa978cAfsO3Gv04KYbfdIhflJpOuKN2Fe4duvrl0_8U45AiDxOSZUdweYQNwe16rs2w"/>
+<div class="min-w-0">
+<h3 class="font-title-md text-title-md text-on-surface truncate">Maya Lin</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">PhD Candidate • Bioengineering</p>
+</div>
+</div>
+<span class="status-badge bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-space-sm py-space-xs rounded-full shrink-0">Urgent</span>
+</div>
+<div class="bg-surface-container-low rounded-DEFAULT p-space-md flex flex-col gap-space-xs shadow-[inset_0_2px_6px_rgba(38,48,68,0.05)]">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Project & Equipment</span>
+<p class="font-label-lg text-label-lg text-on-surface">Cellular Organelle Fluorescence Mapping</p>
+<div class="flex flex-wrap gap-space-xs pt-space-xs">
+<span class="bg-primary-container text-on-primary-container font-label-md text-label-md px-space-sm py-space-xs rounded-full">Confocal Microscope</span>
+<span class="bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md px-space-sm py-space-xs rounded-full">Thu 14:00 - 17:00</span>
+</div>
+</div>
+<div class="bg-secondary-container/50 rounded-DEFAULT p-space-md flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-on-secondary-container text-[20px] shrink-0" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<span class="font-label-md text-label-md text-on-secondary-container">AI Scheduling Suggestion</span>
+<p class="font-body-sm text-body-sm text-on-surface">Zero conflicts detected. Adjacent wet-bench B204 is also free if sample prep is needed.</p>
+</div>
+</div>
+</div>
+<div class="action-row flex flex-wrap items-center gap-space-sm pt-space-xs">
+<button class="flex-1 bg-primary-container text-on-primary-container font-label-lg text-label-lg px-space-md py-space-sm rounded-full shadow-[0_6px_14px_-4px_rgba(41,105,90,0.22),inset_0_2px_4px_rgba(255,255,255,0.7)] hover:brightness-95 active:scale-95 transition-all flex items-center justify-center gap-space-xs" onclick="handleDecision(this, 'Approved', 'bg-primary-container text-on-primary-container')" type="button">
+<span class="material-symbols-outlined text-[18px]">check</span>
+<span>Approve</span>
+</button>
+<button class="bg-surface-container-low hover:bg-secondary-container text-on-surface hover:text-on-secondary-container font-label-md text-label-md px-space-md py-space-sm rounded-full shadow-[0_4px_10px_-2px_rgba(38,48,68,0.06),inset_0_2px_4px_rgba(255,255,255,0.8)] active:scale-95 transition-all" onclick="handleDecision(this, 'Alternative Suggested', 'bg-secondary-container text-on-secondary-container')" type="button">
+            Suggest Alt
+          </button>
+<button aria-label="Reject" class="bg-surface-container-low hover:bg-tertiary-container text-on-surface-variant hover:text-on-tertiary-container font-label-md text-label-md p-space-sm rounded-full shadow-[0_4px_10px_-2px_rgba(38,48,68,0.06),inset_0_2px_4px_rgba(255,255,255,0.8)] active:scale-95 transition-all" onclick="handleDecision(this, 'Rejected', 'bg-tertiary-container text-on-tertiary-container')" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</article>
+<article class="approval-card bg-surface-container-lowest rounded-lg p-space-lg shadow-[0_12px_28px_-6px_rgba(38,48,68,0.08),inset_0_2px_4px_rgba(255,255,255,0.85),inset_0_-4px_8px_rgba(38,48,68,0.04)] flex flex-col justify-between gap-space-lg transition-all duration-300">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<img class="w-12 h-12 rounded-full object-cover shrink-0 shadow-[0_4px_10px_rgba(38,48,68,0.08)]" data-alt="Portrait of a male undergraduate chemistry researcher in a sunlit campus laboratory, wearing safety glasses pushed up on his head and a neat sweater, soft warm cream and sky blue background tones, friendly confident expression, photorealistic editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFaTH575CpmFu6DhSxM0wUokxKHS0TYj9LWw9aHDIAdMWRSHxdPqS--9ksibaZyq-dDs1bQk9Gn3J5JcPgDQi3uExvBRCNZzj3jOr8hRDhNoOIJayGNqrCF9EoXgtLFKGL2Bj0eI7sB57yQNcx9WIwi2i9kVVFg0PmnFWqBzGOzvywiW1haSyHvoBkd5klILi3Vbq8bKtmuFxr17foSZ4dLzGSpwPP-qCAHmcoTDc"/>
+<div class="min-w-0">
+<h3 class="font-title-md text-title-md text-on-surface truncate">Liam O'Connor</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Senior Thesis • Organic Chem</p>
+</div>
+</div>
+<span class="status-badge bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-space-sm py-space-xs rounded-full shrink-0">Routine</span>
+</div>
+<div class="bg-surface-container-low rounded-DEFAULT p-space-md flex flex-col gap-space-xs shadow-[inset_0_2px_6px_rgba(38,48,68,0.05)]">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Project & Equipment</span>
+<p class="font-label-lg text-label-lg text-on-surface">Catalyst Ligand Purity Verification</p>
+<div class="flex flex-wrap gap-space-xs pt-space-xs">
+<span class="bg-secondary-container text-on-secondary-container font-label-md text-label-md px-space-sm py-space-xs rounded-full">NMR 400MHz</span>
+<span class="bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md px-space-sm py-space-xs rounded-full">Fri 09:00 - 11:00</span>
+</div>
+</div>
+<div class="bg-tertiary-fixed/50 rounded-DEFAULT p-space-md flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-on-tertiary-fixed text-[20px] shrink-0" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<span class="font-label-md text-label-md text-on-tertiary-fixed">AI Scheduling Suggestion</span>
+<p class="font-body-sm text-body-sm text-on-surface">Liquid nitrogen refill scheduled 09:00-09:30. Recommend shifting slot to 10:00-12:00.</p>
+</div>
+</div>
+</div>
+<div class="action-row flex flex-wrap items-center gap-space-sm pt-space-xs">
+<button class="flex-1 bg-primary-container text-on-primary-container font-label-lg text-label-lg px-space-md py-space-sm rounded-full shadow-[0_6px_14px_-4px_rgba(41,105,90,0.22),inset_0_2px_4px_rgba(255,255,255,0.7)] hover:brightness-95 active:scale-95 transition-all flex items-center justify-center gap-space-xs" onclick="handleDecision(this, 'Approved', 'bg-primary-container text-on-primary-container')" type="button">
+<span class="material-symbols-outlined text-[18px]">check</span>
+<span>Approve</span>
+</button>
+<button class="bg-surface-container-low hover:bg-secondary-container text-on-surface hover:text-on-secondary-container font-label-md text-label-md px-space-md py-space-sm rounded-full shadow-[0_4px_10px_-2px_rgba(38,48,68,0.06),inset_0_2px_4px_rgba(255,255,255,0.8)] active:scale-95 transition-all" onclick="handleDecision(this, 'Alternative Suggested', 'bg-secondary-container text-on-secondary-container')" type="button">
+            Suggest Alt
+          </button>
+<button aria-label="Reject" class="bg-surface-container-low hover:bg-tertiary-container text-on-surface-variant hover:text-on-tertiary-container font-label-md text-label-md p-space-sm rounded-full shadow-[0_4px_10px_-2px_rgba(38,48,68,0.06),inset_0_2px_4px_rgba(255,255,255,0.8)] active:scale-95 transition-all" onclick="handleDecision(this, 'Rejected', 'bg-tertiary-container text-on-tertiary-container')" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</article>
+<article class="approval-card bg-surface-container-lowest rounded-lg p-space-lg shadow-[0_12px_28px_-6px_rgba(38,48,68,0.08),inset_0_2px_4px_rgba(255,255,255,0.85),inset_0_-4px_8px_rgba(38,48,68,0.04)] flex flex-col justify-between gap-space-lg transition-all duration-300">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<img class="w-12 h-12 rounded-full object-cover shrink-0 shadow-[0_4px_10px_rgba(38,48,68,0.08)]" data-alt="Portrait of a female materials science researcher in a cleanroom robotics and imaging lab, wearing a light blue lab jacket, soft warm cream and pastel mint lighting, calm and focused expression, photorealistic editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCPpbqoPmpNP0cy8r6WdtmEFXg3H714a7mDowJG9_JhWIEo7DbuavBThEadksHdhQB4GHI8TpGgTomSqyEl4JRVJBz6Duag7Rv9wAaSRlwqqb73i4z4czgiTsSH8MzympkjkEOkCtNxZOh2VjxCtXB-3Rz4-WFCWvLzd5ZdWOgo2Fkyec8_sIYPmE3cjYfz9Dg7cJtkQ9Z9OMsYfTNJJRTpkVF2_Ae9N8PL0l1-UI"/>
+<div class="min-w-0">
+<h3 class="font-title-md text-title-md text-on-surface truncate">Elena Rostova</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Postdoc • Materials Science</p>
+</div>
+</div>
+<span class="status-badge bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px-space-sm py-space-xs rounded-full shrink-0">Certified</span>
+</div>
+<div class="bg-surface-container-low rounded-DEFAULT p-space-md flex flex-col gap-space-xs shadow-[inset_0_2px_6px_rgba(38,48,68,0.05)]">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Project & Equipment</span>
+<p class="font-label-lg text-label-lg text-on-surface">Graphene Lattice Defect Imaging</p>
+<div class="flex flex-wrap gap-space-xs pt-space-xs">
+<span class="bg-tertiary-container text-on-tertiary-container font-label-md text-label-md px-space-sm py-space-xs rounded-full">Cryo-EM Suite</span>
+<span class="bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md px-space-sm py-space-xs rounded-full">Mon 13:00 - 16:00</span>
+</div>
+</div>
+<div class="bg-secondary-container/50 rounded-DEFAULT p-space-md flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-on-secondary-container text-[20px] shrink-0" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<div class="flex flex-col gap-space-xs min-w-0">
+<span class="font-label-md text-label-md text-on-secondary-container">AI Scheduling Suggestion</span>
+<p class="font-body-sm text-body-sm text-on-surface">Optimal power-grid window. Safety certification Level 3 verified on file.</p>
+</div>
+</div>
+</div>
+<div class="action-row flex flex-wrap items-center gap-space-sm pt-space-xs">
+<button class="flex-1 bg-primary-container text-on-primary-container font-label-lg text-label-lg px-space-md py-space-sm rounded-full shadow-[0_6px_14px_-4px_rgba(41,105,90,0.22),inset_0_2px_4px_rgba(255,255,255,0.7)] hover:brightness-95 active:scale-95 transition-all flex items-center justify-center gap-space-xs" onclick="handleDecision(this, 'Approved', 'bg-primary-container text-on-primary-container')" type="button">
+<span class="material-symbols-outlined text-[18px]">check</span>
+<span>Approve</span>
+</button>
+<button class="bg-surface-container-low hover:bg-secondary-container text-on-surface hover:text-on-secondary-container font-label-md text-label-md px-space-md py-space-sm rounded-full shadow-[0_4px_10px_-2px_rgba(38,48,68,0.06),inset_0_2px_4px_rgba(255,255,255,0.8)] active:scale-95 transition-all" onclick="handleDecision(this, 'Alternative Suggested', 'bg-secondary-container text-on-secondary-container')" type="button">
+            Suggest Alt
+          </button>
+<button aria-label="Reject" class="bg-surface-container-low hover:bg-tertiary-container text-on-surface-variant hover:text-on-tertiary-container font-label-md text-label-md p-space-sm rounded-full shadow-[0_4px_10px_-2px_rgba(38,48,68,0.06),inset_0_2px_4px_rgba(255,255,255,0.8)] active:scale-95 transition-all" onclick="handleDecision(this, 'Rejected', 'bg-tertiary-container text-on-tertiary-container')" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</article>
+</div>
+</section>
+<section class="flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary">02 / Admin & Resource Operations</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Live Telemetry</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Facility Analytics & Management</h2>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low p-space-xs rounded-full shadow-[inset_0_2px_4px_rgba(38,48,68,0.05)]">
+<button class="admin-tab bg-surface-container-lowest text-on-surface font-label-md text-label-md px-space-md py-space-xs rounded-full shadow-[0_4px_10px_-2px_rgba(38,48,68,0.08)] transition-all" onclick="switchAdminTab('equipment', this)" type="button">Equipment</button>
+<button class="admin-tab text-on-surface-variant font-label-md text-label-md px-space-md py-space-xs rounded-full transition-all" onclick="switchAdminTab('reservations', this)" type="button">Reservations</button>
+<button class="admin-tab text-on-surface-variant font-label-md text-label-md px-space-md py-space-xs rounded-full transition-all" onclick="switchAdminTab('maintenance', this)" type="button">Maintenance</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-lg p-space-lg shadow-[0_12px_28px_-6px_rgba(38,48,68,0.08),inset_0_2px_4px_rgba(255,255,255,0.85),inset_0_-4px_8px_rgba(38,48,68,0.04)] flex flex-col justify-between gap-space-lg">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Weekly Resource Utilisation</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">84.2% Peak Campus Capacity</h3>
+</div>
+<span class="bg-primary-container text-on-primary-container font-label-md text-label-md px-space-md py-space-xs rounded-full">+6.4% vs last wk</span>
+</div>
+<div class="w-full pt-space-sm">
+<svg aria-label="Weekly Resource Utilisation Bar Chart" class="w-full h-48 overflow-visible" role="img" viewbox="0 0 560 190">
+<g class="text-surface-container-high" stroke="currentColor" stroke-dasharray="4 4" stroke-width="1">
+<line x1="0" x2="560" y1="30" y2="30"></line>
+<line x1="0" x2="560" y1="75" y2="75"></line>
+<line x1="0" x2="560" y1="120" y2="120"></line>
+<line x1="0" x2="560" y1="165" y2="165"></line>
+</g>
+<g>
+<rect class="fill-primary-container" height="103" rx="14" width="44" x="24" y="62"></rect>
+<text class="fill-on-surface-variant font-label-sm text-label-sm" text-anchor="middle" x="46" y="185">Mon</text>
+<rect class="fill-primary-container" height="127" rx="14" width="44" x="100" y="38"></rect>
+<text class="fill-on-surface-variant font-label-sm text-label-sm" text-anchor="middle" x="122" y="185">Tue</text>
+<rect class="fill-primary" height="141" rx="14" width="44" x="176" y="24"></rect>
+<text class="fill-on-surface font-label-sm text-label-sm" text-anchor="middle" x="198" y="185">Wed</text>
+<rect class="fill-secondary-container" height="119" rx="14" width="44" x="252" y="46"></rect>
+<text class="fill-on-surface-variant font-label-sm text-label-sm" text-anchor="middle" x="274" y="185">Thu</text>
+<rect class="fill-secondary-container" height="111" rx="14" width="44" x="328" y="54"></rect>
+<text class="fill-on-surface-variant font-label-sm text-label-sm" text-anchor="middle" x="350" y="185">Fri</text>
+<rect class="fill-tertiary-container" height="63" rx="14" width="44" x="404" y="102"></rect>
+<text class="fill-on-surface-variant font-label-sm text-label-sm" text-anchor="middle" x="426" y="185">Sat</text>
+<rect class="fill-tertiary-container" height="47" rx="14" width="44" x="480" y="118"></rect>
+<text class="fill-on-surface-variant font-label-sm text-label-sm" text-anchor="middle" x="502" y="185">Sun</text>
+</g>
+</svg>
+</div>
+</div>
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-lg p-space-lg shadow-[0_12px_28px_-6px_rgba(38,48,68,0.08),inset_0_2px_4px_rgba(255,255,255,0.85),inset_0_-4px_8px_rgba(38,48,68,0.04)] flex flex-col justify-between gap-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Utilisation by Lab Zone</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Active Instrument Split</h3>
+</div>
+<div class="flex items-center justify-around gap-space-md py-space-sm">
+<svg aria-label="Lab Zone Utilisation Donut Chart" class="w-32 h-32 shrink-0 -rotate-90" role="img" viewbox="0 0 120 120">
+<circle class="stroke-surface-container-low" cx="60" cy="60" fill="none" r="46" stroke-width="16"></circle>
+<circle class="stroke-primary-container" cx="60" cy="60" fill="none" r="46" stroke-dasharray="130 289" stroke-linecap="round" stroke-width="16"></circle>
+<circle class="stroke-secondary-container" cx="60" cy="60" fill="none" r="46" stroke-dasharray="92 289" stroke-dashoffset="-135" stroke-linecap="round" stroke-width="16"></circle>
+<circle class="stroke-tertiary-container" cx="60" cy="60" fill="none" r="46" stroke-dasharray="58 289" stroke-dashoffset="-232" stroke-linecap="round" stroke-width="16"></circle>
+</svg>
+<div class="flex flex-col gap-space-sm flex-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-primary-container"></span>
+<span class="font-body-md text-body-md text-on-surface">Imaging</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface">45%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-secondary-container"></span>
+<span class="font-body-md text-body-md text-on-surface">Spectroscopy</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface">32%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-tertiary-container"></span>
+<span class="font-body-md text-body-md text-on-surface">Wet Labs</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface">23%</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-DEFAULT p-space-md flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">18 of 22 instruments online</span>
+<span class="font-label-md text-label-md text-primary">98.4% Uptime</span>
+</div>
+</div>
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-lg p-space-lg shadow-[0_12px_28px_-6px_rgba(38,48,68,0.08),inset_0_2px_4px_rgba(255,255,255,0.85),inset_0_-4px_8px_rgba(38,48,68,0.04)] flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Laboratory Management</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Campus Facilities</h3>
+</div>
+<span class="material-symbols-outlined text-primary">domain</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="bg-surface-container-low rounded-DEFAULT p-space-md flex items-center justify-between gap-space-sm">
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface truncate">Bio-Imaging Suite B204</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">6/8 benches occupied</p>
+</div>
+<span class="bg-primary-container text-on-primary-container font-label-sm text-label-sm px-space-sm py-space-xs rounded-full shrink-0">Open</span>
+</div>
+<div class="bg-surface-container-low rounded-DEFAULT p-space-md flex items-center justify-between gap-space-sm">
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface truncate">Organic Synthesis A112</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">11/12 fume hoods active</p>
+</div>
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-space-sm py-space-xs rounded-full shrink-0">High Load</span>
+</div>
+<div class="bg-surface-container-low rounded-DEFAULT p-space-md flex items-center justify-between gap-space-sm">
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface truncate">Cryo-EM Facility C08</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Restricted Level 3 access</p>
+</div>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-space-sm py-space-xs rounded-full shrink-0">Calibrating</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-lg p-space-lg shadow-[0_12px_28px_-6px_rgba(38,48,68,0.08),inset_0_2px_4px_rgba(255,255,255,0.85),inset_0_-4px_8px_rgba(38,48,68,0.04)] flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant" id="admin-panel-overline">Equipment Management</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" id="admin-panel-title">Instrument Inventory & Status</h3>
+</div>
+<span class="bg-surface-container-low text-on-surface-variant font-label-md text-label-md px-space-md py-space-xs rounded-full">Live Sync</span>
+</div>
+<div class="admin-panel flex flex-col gap-space-sm" id="tab-equipment">
+<div class="bg-surface-container-low rounded-DEFAULT p-space-md flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-primary">biotech</span>
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface truncate">Zeiss LSM 980 Confocal</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Suite B204 • Next service in 18 days</p>
+</div>
+</div>
+<span class="bg-primary-container text-on-primary-container font-label-md text-label-md px-space-sm py-space-xs rounded-full shrink-0">Operational</span>
+</div>
+<div class="bg-surface-container-low rounded-DEFAULT p-space-md flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-secondary">science</span>
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface truncate">Bruker Avance 400MHz NMR</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Lab A112 • Cryogen refill Fri 09:00</p>
+</div>
+</div>
+<span class="bg-secondary-container text-on-secondary-container font-label-md text-label-md px-space-sm py-space-xs rounded-full shrink-0">Scheduled</span>
+</div>
+<div class="bg-surface-container-low rounded-DEFAULT p-space-md flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-tertiary">precision_manufacturing</span>
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface truncate">Thermo Fisher Titan Krios</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Facility C08 • Vacuum seal check</p>
+</div>
+</div>
+<span class="bg-tertiary-container text-on-tertiary-container font-label-md text-label-md px-space-sm py-space-xs rounded-full shrink-0">Maintenance</span>
+</div>
+</div>
+<div class="admin-panel hidden flex flex-col gap-space-sm" id="tab-reservations">
+<div class="bg-surface-container-low rounded-DEFAULT p-space-md flex items-center justify-between gap-space-md">
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface truncate">Today, 14:00 - 17:00 • Confocal Microscope</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Reserved by Dr. Patel's Lab Group</p>
+</div>
+<span class="bg-primary-container text-on-primary-container font-label-md text-label-md px-space-sm py-space-xs rounded-full shrink-0">Active</span>
+</div>
+<div class="bg-surface-container-low rounded-DEFAULT p-space-md flex items-center justify-between gap-space-md">
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface truncate">Tomorrow, 10:00 - 12:30 • Mass Spectrometer</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Reserved by Marcus Vance (Chem)</p>
+</div>
+<span class="bg-secondary-container text-on-secondary-container font-label-md text-label-md px-space-sm py-space-xs rounded-full shrink-0">Confirmed</span>
+</div>
+</div>
+<div class="admin-panel hidden flex flex-col gap-space-sm" id="tab-maintenance">
+<div class="bg-surface-container-low rounded-DEFAULT p-space-md flex items-center justify-between gap-space-md">
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface truncate">Titan Krios Cryo-EM • Vacuum Seal</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Technician: R. Gomez • ETA 2 hours</p>
+</div>
+<span class="bg-tertiary-container text-on-tertiary-container font-label-md text-label-md px-space-sm py-space-xs rounded-full shrink-0">In Progress</span>
+</div>
+<div class="bg-surface-container-low rounded-DEFAULT p-space-md flex items-center justify-between gap-space-md">
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface truncate">HPLC System #4 • Column Flush</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Completed today at 08:30 AM</p>
+</div>
+<span class="bg-primary-container text-on-primary-container font-label-md text-label-md px-space-sm py-space-xs rounded-full shrink-0">Cleared</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  function updatePendingCount() {
+    const remaining = document.querySelectorAll('.approval-card:not([data-decided="true"])').length;
+    const badge = document.getElementById('pending-count');
+    if (badge) {
+      badge.textContent = remaining + ' Pending';
+    }
+  }
+
+  function handleDecision(btn, label, pillClasses) {
+    const card = btn.closest('.approval-card');
+    if (!card) return;
+    card.setAttribute('data-decided', 'true');
+    const actionRow = card.querySelector('.action-row');
+    if (actionRow) {
+      actionRow.innerHTML = '<div class="w-full py-space-sm px-space-md rounded-full font-label-lg text-label-lg text-center ' + pillClasses + '">' + label + '</div>';
+    }
+    card.classList.add('opacity-80');
+    updatePendingCount();
+  }
+
+  function resetApprovals() {
+    location.reload();
+  }
+
+  function switchAdminTab(tabName, clickedBtn) {
+    document.querySelectorAll('.admin-panel').forEach(panel => {
+      panel.classList.add('hidden');
+    });
+    const target = document.getElementById('tab-' + tabName);
+    if (target) {
+      target.classList.remove('hidden');
+    }
+
+    document.querySelectorAll('.admin-tab').forEach(btn => {
+      btn.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'shadow-[0_4px_10px_-2px_rgba(38,48,68,0.08)]');
+      btn.classList.add('text-on-surface-variant');
+    });
+    clickedBtn.classList.add('bg-surface-container-lowest', 'text-on-surface', 'shadow-[0_4px_10px_-2px_rgba(38,48,68,0.08)]');
+    clickedBtn.classList.remove('text-on-surface-variant');
+
+    const overline = document.getElementById('admin-panel-overline');
+    const title = document.getElementById('admin-panel-title');
+    if (tabName === 'equipment') {
+      overline.textContent = 'Equipment Management';
+      title.textContent = 'Instrument Inventory & Status';
+    } else if (tabName === 'reservations') {
+      overline.textContent = 'Reservations';
+      title.textContent = 'Upcoming Lab Bookings';
+    } else {
+      overline.textContent = 'Maintenance Status';
+      title.textContent = 'Active Service & Calibration';
+    }
+  }
+</script></main></div></body></html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Plus+Jakarta+Sans:wght@600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-tint":"#29695a","surface-variant":"#e7e2d7","surface-dim":"#dedacf","primary-fixed":"#afefdc","surface":"#fef9ee","background":"#fef9ee","secondary-container":"#b0e4fd","inverse-primary":"#94d3c1","surface-container-highest":"#e7e2d7","secondary-fixed-dim":"#9acee6","outline":"#707975","primary":"#29695a","outline-variant":"#bfc9c4","tertiary-fixed":"#ffd9e0","tertiary-container":"#ffcfd9","error-container":"#ffdad6","on-primary":"#ffffff","primary-fixed-dim":"#94d3c1","on-error-container":"#93000a","inverse-on-surface":"#f5f0e5","on-surface-variant":"#3f4945","on-primary-fixed-variant":"#075043","secondary-fixed":"#bce9ff","on-error":"#ffffff","on-tertiary-fixed-variant":"#673946","primary-container":"#a8e8d5","on-tertiary":"#ffffff","surface-container-low":"#f8f3e8","on-primary-fixed":"#002019","secondary":"#2f6579","surface-container":"#f2ede2","on-tertiary-fixed":"#340e1b","on-primary-container":"#2b6a5b","surface-container-high":"#ede8dd","on-background":"#1d1c15","on-secondary-fixed-variant":"#114d61","inverse-surface":"#323029","on-tertiary-container":"#84515e","on-surface":"#1d1c15","on-secondary-container":"#32677c","on-secondary-fixed":"#001f29","tertiary":"#82505d","on-secondary":"#ffffff","surface-bright":"#fef9ee","surface-container-lowest":"#ffffff","error":"#ba1a1a","tertiary-fixed-dim":"#f5b5c4"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{"space-md":"1rem","space-xl":"2.5rem","space-lg":"1.5rem","margin":"2rem","gutter":"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem"},"fontFamily":{"headline-md":["Plus Jakarta Sans"],"body-md":["Inter"],"body-lg":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"label-lg":["Inter"],"label-md":["Inter"],"headline-lg":["Plus Jakarta Sans"],"label-sm":["Inter"],"headline-sm":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"body-sm":["Inter"],"display-lg":["Plus Jakarta Sans"]},"fontSize":{"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"600"}],"title-md":["18px",{"lineHeight":"26px","fontWeight":"600"}],"display-lg-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"display-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><main class="w-full bg-surface"><div class="flex flex-col w-full">
+<!-- Floating Claymorphic Navigation Bar -->
+<header class="w-full max-w-[1360px] mx-auto px-4 md:px-8 py-4">
+<nav class="bg-surface-container-lowest/90 backdrop-blur-md rounded-full px-6 py-3 shadow-md flex items-center justify-between gap-4">
+<a class="flex items-center gap-3 shrink-0 group" href="#">
+<img alt="LabLink" class="h-9 w-auto object-contain transition-transform duration-200 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbSeMT7hyR5scS9kihc-CsQttAqViG3mMmhMK9-dVN0N2tmyVDo55HXJbbgznJDYKxUNn7X8_ckNA5r-Giiul4vUfvPq-6aeaW_WveGHGHmQpkn7V6c5gfK4-k4FTt3zyt2KHvj5okbOveMv043sKw_nqN5lRMS2B2R4oPtfUk36Z0bK56PuuNU2_r81MUVYtkzq0N_Ab0jPjYV4Qpt0y9YyEoM7FyHh7c_T_-vNM"/>
+</a>
+<div class="hidden lg:flex items-center gap-2">
+<a class="px-4 py-2 rounded-full font-label-lg text-label-lg text-on-surface hover:bg-surface-container-low transition-colors" href="#equipment">Equipment</a>
+<a class="px-4 py-2 rounded-full font-label-lg text-label-lg text-on-surface hover:bg-surface-container-low transition-colors" href="#departments">Departments</a>
+<a class="px-4 py-2 rounded-full font-label-lg text-label-lg text-on-surface hover:bg-surface-container-low transition-colors" href="#how-it-works">How It Works</a>
+<a class="px-4 py-2 rounded-full font-label-lg text-label-lg text-on-surface hover:bg-surface-container-low transition-colors" href="#ai-matching">AI Matching</a>
+</div>
+<div class="flex items-center gap-3">
+<button class="hidden sm:inline-flex px-5 py-2.5 rounded-full bg-surface-container-low text-on-surface font-label-lg text-label-lg shadow-sm hover:bg-surface-container active:scale-95 transition-all" type="button">
+          Sign In
+        </button>
+<button class="px-5 py-2.5 rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg shadow-md hover:shadow-lg active:scale-95 transition-all" type="button">
+          Get Started
+        </button>
+</div>
+</nav>
+</header>
+<!-- Hero Section -->
+<section class="w-full max-w-[1360px] mx-auto px-4 md:px-8 pt-6 pb-16 lg:pt-10 lg:pb-24">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+<!-- Left Copy -->
+<div class="lg:col-span-6 flex flex-col items-start gap-6">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md shadow-sm">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">science</span>
+<span>Campus-Wide Research Network</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight">
+          Big ideas start in the right lab.
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+          Discover specialised equipment, access laboratories across campus and bring your next project to life.
+        </p>
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg shadow-md hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 active:scale-95 transition-all" href="#equipment">
+<span>Explore Equipment</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+<a class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-surface-container-lowest text-on-surface font-label-lg text-label-lg shadow-md hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 active:scale-95 transition-all" href="#how-it-works">
+<span class="material-symbols-outlined text-lg text-primary">play_circle</span>
+<span>How LabLink Works</span>
+</a>
+</div>
+<!-- Quick Trust Metrics -->
+<div class="grid grid-cols-3 gap-4 pt-4 w-full max-w-md">
+<div class="bg-surface-container-lowest rounded-lg p-4 shadow-sm">
+<div class="font-headline-md text-headline-md text-primary">140+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Shared Instruments</div>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-4 shadow-sm">
+<div class="font-headline-md text-headline-md text-secondary">18</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Campus Labs</div>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-4 shadow-sm">
+<div class="font-headline-md text-headline-md text-tertiary">24/7</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Smart Booking</div>
+</div>
+</div>
+</div>
+<!-- Right 3D Clay Illustration -->
+<div class="lg:col-span-6 relative">
+<div class="relative bg-surface-container-lowest rounded-xl p-4 md:p-6 shadow-xl overflow-hidden">
+<div class="absolute -top-12 -right-12 w-48 h-48 rounded-full bg-primary-container/40 blur-2xl pointer-events-none"></div>
+<div class="absolute -bottom-12 -left-12 w-48 h-48 rounded-full bg-secondary-container/40 blur-2xl pointer-events-none"></div>
+<img alt="3D clay laboratory equipment network" class="relative z-10 w-full h-auto rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWS6dGXDHSrAg2E4vV1hOtoEVt2dIooqBaBStSEk6k5kYNyFEmFRJpt_TW97_0JRbhfE1PQrZjVrdIkbHcbzbgh8lqskjznCK3oLAhrrqgF_V-5AE0vd3315hZK7bCJrYMhHC0gPf0xE1zWa5Qwq3nY0xdy0ez5CbYeh7D2FN4GOeRUXBfuJ7EK9HIoeO1jOYwRlTvGdiYrcRjQGDVnRwJN5-uVza87SA3k8sXaqI"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Equipment Discovery Preview Cards -->
+<section class="w-full max-w-[1360px] mx-auto px-4 md:px-8 py-12 lg:py-16" id="equipment">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+<div class="flex flex-col gap-2">
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary">01 / Equipment Discovery</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Ready-to-book instruments</h2>
+</div>
+<!-- Filter Pills -->
+<div class="flex flex-wrap items-center gap-2" id="equipment-filters">
+<button class="filter-btn px-4 py-2 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md shadow-sm transition-all" data-filter="all" type="button">All Labs</button>
+<button class="filter-btn px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container-low transition-all" data-filter="imaging" type="button">Imaging</button>
+<button class="filter-btn px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container-low transition-all" data-filter="fabrication" type="button">Fabrication</button>
+<button class="filter-btn px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container-low transition-all" data-filter="wet-lab" type="button">Wet Lab</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="equipment-grid">
+<!-- Card 1 -->
+<article class="equipment-card bg-surface-container-lowest rounded-lg p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between gap-5" data-category="imaging">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between gap-2">
+<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md">Imaging</span>
+<span class="inline-flex items-center gap-1.5 font-label-md text-label-md text-primary">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+              Available Today
+            </span>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-2xl bg-secondary-container/60 flex items-center justify-center shrink-0 text-on-secondary-container">
+<span class="material-symbols-outlined text-2xl">biotech</span>
+</div>
+<div class="min-w-0">
+<h3 class="font-title-md text-title-md text-on-surface truncate">Confocal Laser Microscope</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Bio-Imaging Core • Rm 304</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            High-resolution 4-channel fluorescence imaging for live-cell and fixed-tissue samples.
+          </p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-label-md text-label-md text-on-surface-variant">Next slot: 2:30 PM</span>
+<button class="px-4 py-2 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md shadow-sm hover:shadow-md active:scale-95 transition-all" type="button">
+            Reserve
+          </button>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="equipment-card bg-surface-container-lowest rounded-lg p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between gap-5" data-category="fabrication">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between gap-2">
+<span class="px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-md text-label-md">Fabrication</span>
+<span class="inline-flex items-center gap-1.5 font-label-md text-label-md text-primary">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+              Available Now
+            </span>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-2xl bg-tertiary-container/60 flex items-center justify-center shrink-0 text-on-tertiary-container">
+<span class="material-symbols-outlined text-2xl">precision_manufacturing</span>
+</div>
+<div class="min-w-0">
+<h3 class="font-title-md text-title-md text-on-surface truncate">6-Axis Robotic Arm Cell</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Mechatronics Lab • Rm 112</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Programmable precision assembly unit with force-torque sensing and Python SDK.
+          </p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-label-md text-label-md text-on-surface-variant">Next slot: 1:00 PM</span>
+<button class="px-4 py-2 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md shadow-sm hover:shadow-md active:scale-95 transition-all" type="button">
+            Reserve
+          </button>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="equipment-card bg-surface-container-lowest rounded-lg p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between gap-5" data-category="wet-lab">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between gap-2">
+<span class="px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md">Wet Lab</span>
+<span class="inline-flex items-center gap-1.5 font-label-md text-label-md text-tertiary">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+              In Use Until 3 PM
+            </span>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-2xl bg-primary-container/60 flex items-center justify-center shrink-0 text-on-primary-container">
+<span class="material-symbols-outlined text-2xl">humidity_percentage</span>
+</div>
+<div class="min-w-0">
+<h3 class="font-title-md text-title-md text-on-surface truncate">UV-Vis Spectrophotometer</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Analytical Chem • Rm 208</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Dual-beam UV-Vis absorbance & kinetics analyzer with temperature-controlled cuvette holder.
+          </p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-label-md text-label-md text-on-surface-variant">Next slot: 3:15 PM</span>
+<button class="px-4 py-2 rounded-full bg-surface-container-low text-on-surface font-label-md text-label-md shadow-sm hover:bg-primary-container hover:text-on-primary-container active:scale-95 transition-all" type="button">
+            Join Queue
+          </button>
+</div>
+</article>
+</div>
+</section>
+<!-- Connected Laboratory Departments -->
+<section class="w-full max-w-[1360px] mx-auto px-4 md:px-8 py-12 lg:py-16" id="departments">
+<div class="bg-surface-container-low rounded-xl p-8 md:p-12 shadow-sm">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+<div class="flex flex-col gap-2">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary">02 / Campus Network</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Connected laboratory departments</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Cross-disciplinary access across engineering, life sciences, and physical chemistry.
+        </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-surface-container-lowest rounded-lg p-6 shadow-md hover:-translate-y-1 transition-all flex flex-col gap-3">
+<div class="w-11 h-11 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined">genetics</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface">Bioengineering</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">34 instruments • 92% uptime</p>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-6 shadow-md hover:-translate-y-1 transition-all flex flex-col gap-3">
+<div class="w-11 h-11 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined">memory</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface">Robotics & ECE</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">42 instruments • 98% uptime</p>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-6 shadow-md hover:-translate-y-1 transition-all flex flex-col gap-3">
+<div class="w-11 h-11 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined">experiment</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface">Materials & Chem</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">29 instruments • 95% uptime</p>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-6 shadow-md hover:-translate-y-1 transition-all flex flex-col gap-3">
+<div class="w-11 h-11 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined">view_in_ar</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface">Rapid Prototyping</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">35 instruments • 99% uptime</p>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works 3-Step Clay Cards -->
+<section class="w-full max-w-[1360px] mx-auto px-4 md:px-8 py-12 lg:py-16" id="how-it-works">
+<div class="text-center max-w-2xl mx-auto mb-12 flex flex-col gap-3">
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary">03 / Workflow</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">From idea to bench in three steps</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container-lowest rounded-lg p-8 shadow-md hover:shadow-xl transition-all flex flex-col gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container font-headline-sm text-headline-sm flex items-center justify-center shadow-sm">
+          1
+        </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Describe your experiment</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Search by instrument name or let LabLink AI recommend compatible equipment based on your protocol.
+        </p>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-8 shadow-md hover:shadow-xl transition-all flex flex-col gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container font-headline-sm text-headline-sm flex items-center justify-center shadow-sm">
+          2
+        </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Pick a smart time slot</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          View live calibration status, safety prerequisites, and open windows across all campus buildings.
+        </p>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-8 shadow-md hover:shadow-xl transition-all flex flex-col gap-4">
+<div class="w-12 h-12 rounded-full bg-tertiary-container text-on-tertiary-container font-headline-sm text-headline-sm flex items-center justify-center shadow-sm">
+          3
+        </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Tap in & start building</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Receive instant digital badge access and automated usage logs synced with your research group.
+        </p>
+</div>
+</div>
+</section>
+<!-- AI-Powered Equipment Matching & Smart Scheduling Highlights -->
+<section class="w-full max-w-[1360px] mx-auto px-4 md:px-8 py-12 lg:py-16" id="ai-matching">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+<!-- AI Matching Card -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-8 md:p-10 shadow-lg flex flex-col justify-between gap-6">
+<div class="flex flex-col gap-4">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md w-fit">
+<span class="material-symbols-outlined text-base">auto_awesome</span>
+<span>AI-Powered Matching</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">
+            Not sure which instrument fits your sample?
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Paste your assay or fabrication requirements. LabLink matches resolution, throughput, and safety clearances in seconds.
+          </p>
+</div>
+<div class="bg-surface-container-low rounded-lg p-5 flex flex-col gap-4">
+<div class="flex items-center gap-3 bg-surface-container-lowest rounded-full px-5 py-3 shadow-inner">
+<span class="material-symbols-outlined text-primary">search</span>
+<span class="font-body-md text-body-md text-on-surface-variant truncate">"Need sub-micron 3D printing for microfluidic channels..."</span>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">98% Match</span>
+<span class="font-label-lg text-label-lg text-on-surface">Nanoscribe Photonic Pro</span>
+</div>
+<span class="font-body-sm text-body-sm text-primary font-semibold">Cleanroom B • Open 4:00 PM</span>
+</div>
+</div>
+</div>
+<!-- Smart Scheduling Card -->
+<div class="lg:col-span-5 bg-primary-container rounded-xl p-8 md:p-10 shadow-lg flex flex-col justify-between gap-6 text-on-primary-container">
+<div class="flex flex-col gap-3">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md w-fit shadow-sm">
+<span class="material-symbols-outlined text-base text-primary">calendar_month</span>
+<span>Smart Scheduling</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-primary-container">
+            Zero-conflict lab calendars
+          </h2>
+<p class="font-body-md text-body-md text-on-primary-container/90">
+            Automatic buffer times for calibration, sterilization, and reagent prep.
+          </p>
+</div>
+<!-- Mini Clay Calendar Widget -->
+<div class="bg-surface-container-lowest rounded-lg p-5 shadow-md text-on-surface">
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-lg text-label-lg">October 2025</span>
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">3 Slots Open</span>
+</div>
+<div class="grid grid-cols-7 gap-2 text-center font-label-sm text-label-sm text-on-surface-variant mb-2">
+<span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
+</div>
+<div class="grid grid-cols-7 gap-2 text-center font-label-md text-label-md">
+<span class="py-1.5 rounded-full text-on-surface-variant">13</span>
+<span class="py-1.5 rounded-full bg-primary-container text-on-primary-container shadow-sm">14</span>
+<span class="py-1.5 rounded-full bg-secondary-container text-on-secondary-container">15</span>
+<span class="py-1.5 rounded-full bg-secondary-container text-on-secondary-container">16</span>
+<span class="py-1.5 rounded-full hover:bg-surface-container-low cursor-pointer">17</span>
+<span class="py-1.5 rounded-full text-on-surface-variant">18</span>
+<span class="py-1.5 rounded-full text-on-surface-variant">19</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Faculty Collaboration Section -->
+<section class="w-full max-w-[1360px] mx-auto px-4 md:px-8 py-12 lg:py-16">
+<div class="bg-surface-container-lowest rounded-xl p-8 md:p-12 shadow-md grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-7 flex flex-col gap-4">
+<span class="font-label-md text-label-md uppercase tracking-wider text-tertiary">04 / Faculty & PI Controls</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+          Built for principal investigators & lab managers
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+          Approve student training certifications, track grant-funded instrument hours, and share idle bench capacity with partner departments—all from one calm dashboard.
+        </p>
+<div class="flex flex-wrap gap-3 pt-2">
+<span class="px-4 py-2 rounded-full bg-surface-container-low font-label-md text-label-md text-on-surface">Training Gatekeeping</span>
+<span class="px-4 py-2 rounded-full bg-surface-container-low font-label-md text-label-md text-on-surface">Grant Usage Reports</span>
+<span class="px-4 py-2 rounded-full bg-surface-container-low font-label-md text-label-md text-on-surface">Automated Billing</span>
+</div>
+</div>
+<div class="lg:col-span-5 grid grid-cols-2 gap-4">
+<div class="bg-secondary-container/50 rounded-lg p-5 flex flex-col gap-2">
+<span class="material-symbols-outlined text-on-secondary-container text-2xl">verified_user</span>
+<div class="font-headline-sm text-headline-sm text-on-surface">100%</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Safety-verified bookings</div>
+</div>
+<div class="bg-tertiary-container/50 rounded-lg p-5 flex flex-col gap-2">
+<span class="material-symbols-outlined text-on-tertiary-container text-2xl">group_add</span>
+<div class="font-headline-sm text-headline-sm text-on-surface">4.2x</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Cross-lab collaboration</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Banner -->
+<section class="w-full max-w-[1360px] mx-auto px-4 md:px-8 pt-6 pb-16">
+<div class="bg-secondary-container rounded-xl p-10 md:p-14 shadow-lg text-center flex flex-col items-center gap-6">
+<h2 class="font-headline-lg text-headline-lg text-on-secondary-container max-w-2xl">
+        Ready to unlock every lab on campus?
+      </h2>
+<p class="font-body-lg text-body-lg text-on-secondary-container/90 max-w-xl">
+        Sign in with your university credentials to browse live equipment availability and book your first session.
+      </p>
+<div class="flex flex-wrap items-center justify-center gap-4">
+<button class="px-8 py-4 rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg shadow-md hover:shadow-xl hover:-translate-y-0.5 active:scale-95 transition-all" type="button">
+          Get Started Free
+        </button>
+<button class="px-8 py-4 rounded-full bg-surface-container-lowest text-on-surface font-label-lg text-label-lg shadow-md hover:shadow-xl hover:-translate-y-0.5 active:scale-95 transition-all" type="button">
+          Request Lab Onboarding
+        </button>
+</div>
+</div>
+</section>
+</div>
+<script>
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter');
+      document.querySelectorAll('.filter-btn').forEach(b => {
+        b.classList.remove('bg-primary-container', 'text-on-primary-container');
+        b.classList.add('bg-surface-container-lowest', 'text-on-surface');
+      });
+      btn.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+      btn.classList.add('bg-primary-container', 'text-on-primary-container');
+
+      document.querySelectorAll('.equipment-card').forEach(card => {
+        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+</script></main></body></html>

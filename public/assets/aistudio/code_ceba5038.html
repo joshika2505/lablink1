@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/><style>
+@layer base{
+  html,body{margin:0;padding:0;scroll-behavior:smooth;}
+  body{overscroll-behavior:none;}
+  main>:first-child{margin-top:0!important;}
+  main>:last-child{margin-bottom:0!important;}
+}
+::-webkit-scrollbar{display:none;}
+
+/* Soft Claymorphism shadows and tactile effects */
+.clay-card {
+  box-shadow: 0 14px 30px -4px rgba(41, 105, 90, 0.08), 0 4px 12px 0 rgba(0, 0, 0, 0.03), inset 0 2px 3px rgba(255, 255, 255, 0.9), inset 0 -2px 4px rgba(0, 0, 0, 0.04);
+}
+.clay-button {
+  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s ease;
+  box-shadow: 0 8px 18px -2px rgba(41, 105, 90, 0.2), inset 0 2px 2px rgba(255, 255, 255, 0.8), inset 0 -2px 3px rgba(0, 0, 0, 0.08);
+}
+.clay-button:active {
+  transform: scale(0.96) translateY(2px) !important;
+  box-shadow: 0 2px 6px -1px rgba(41, 105, 90, 0.2), inset 0 3px 5px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Robot gentle floating animation */
+@keyframes robotFloat {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-7px) rotate(0.8deg); }
+}
+@keyframes robotWave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-18deg); }
+  50% { transform: rotate(14deg); }
+  75% { transform: rotate(-10deg); }
+}
+@keyframes pulseDot {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.3); opacity: 1; }
+}
+
+.animate-robot-float {
+  animation: robotFloat 4.2s ease-in-out infinite;
+}
+.robot-waving {
+  animation: robotWave 0.65s cubic-bezier(0.36, 0.07, 0.19, 0.97) 2;
+  transform-origin: 32px 50px;
+}
+
+/* Scroll reveal initial states */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal-item.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Specular gloss shine on equipment cards */
+.specular-shine {
+  pointer-events: none;
+  background: radial-gradient(circle 180px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 80%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.equipment-card:hover .specular-shine {
+  opacity: 1;
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal-item {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .animate-robot-float {
+    animation: none !important;
+  }
+}
+</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-tint":"#29695a","surface-variant":"#e7e2d7","surface-dim":"#dedacf","primary-fixed":"#afefdc","surface":"#fef9ee","background":"#fef9ee","secondary-container":"#b0e4fd","inverse-primary":"#94d3c1","surface-container-highest":"#e7e2d7","secondary-fixed-dim":"#9acee6","outline":"#707975","primary":"#29695a","outline-variant":"#bfc9c4","tertiary-fixed":"#ffd9e0","tertiary-container":"#ffcfd9","error-container":"#ffdad6","on-primary":"#ffffff","primary-fixed-dim":"#94d3c1","on-error-container":"#93000a","inverse-on-surface":"#f5f0e5","on-surface-variant":"#3f4945","on-primary-fixed-variant":"#075043","secondary-fixed":"#bce9ff","on-error":"#ffffff","on-tertiary-fixed-variant":"#673946","primary-container":"#a8e8d5","on-tertiary":"#ffffff","surface-container-low":"#f8f3e8","on-primary-fixed":"#002019","secondary":"#2f6579","surface-container":"#f2ede2","on-tertiary-fixed":"#340e1b","on-primary-container":"#2b6a5b","surface-container-high":"#ede8dd","on-background":"#1d1c15","on-secondary-fixed-variant":"#114d61","inverse-surface":"#323029","on-tertiary-container":"#84515e","on-surface":"#1d1c15","on-secondary-container":"#32677c","on-secondary-fixed":"#001f29","tertiary":"#82505d","on-secondary":"#ffffff","surface-bright":"#fef9ee","surface-container-lowest":"#ffffff","error":"#ba1a1a","tertiary-fixed-dim":"#f5b5c4"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{"space-md":"1rem","space-xl":"2.5rem","space-lg":"1.5rem","margin":"2rem","gutter":"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem"},"fontFamily":{"headline-md":["Plus Jakarta Sans"],"body-md":["Inter"],"body-lg":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"label-lg":["Inter"],"label-md":["Inter"],"headline-lg":["Plus Jakarta Sans"],"label-sm":["Inter"],"headline-sm":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"body-sm":["Inter"],"display-lg":["Plus Jakarta Sans"]},"fontSize":{"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"600"}],"title-md":["18px",{"lineHeight":"26px","fontWeight":"600"}],"display-lg-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"display-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container"><main class="w-full bg-surface relative"><div class="flex flex-col w-full">
+<!-- Floating Claymorphic Navigation Bar -->
+<header class="w-full max-w-[1360px] mx-auto px-4 md:px-8 py-4 sticky top-0 z-40">
+<nav class="bg-surface-container-lowest/90 backdrop-blur-md rounded-full px-6 py-3 shadow-md flex items-center justify-between gap-4 border border-white/60">
+<a class="flex items-center gap-3 shrink-0 group" href="#">
+<img alt="LabLink" class="h-9 w-auto object-contain transition-transform duration-200 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbSeMT7hyR5scS9kihc-CsQttAqViG3mMmhMK9-dVN0N2tmyVDo55HXJbbgznJDYKxUNn7X8_ckNA5r-Giiul4vUfvPq-6aeaW_WveGHGHmQkn7V6c5gfK4-k4FTt3zyt2KHvj5okbOveMv043sKw_nqN5lRMS2B2R4oPtfUk36Z0bK56PuuNU2_r81MUVYtkzq0N_Ab0jPjYV4Qpt0y9YyEoM7FyHh7c_T_-vNM"/>
+</a>
+<div class="hidden lg:flex items-center gap-2 relative bg-surface-container-low/70 p-1.5 rounded-full border border-white/50">
+<a class="nav-pill px-4 py-2 rounded-full font-label-lg text-label-lg text-on-surface hover:bg-surface-container-lowest hover:shadow-sm transition-all" href="#equipment">Equipment</a>
+<a class="nav-pill px-4 py-2 rounded-full font-label-lg text-label-lg text-on-surface hover:bg-surface-container-lowest hover:shadow-sm transition-all" href="#departments">Departments</a>
+<a class="nav-pill px-4 py-2 rounded-full font-label-lg text-label-lg text-on-surface hover:bg-surface-container-lowest hover:shadow-sm transition-all" href="#how-it-works">How It Works</a>
+<a class="nav-pill px-4 py-2 rounded-full font-label-lg text-label-lg text-on-surface hover:bg-surface-container-lowest hover:shadow-sm transition-all" href="#ai-matching">AI Matching</a>
+</div>
+<div class="flex items-center gap-3">
+<button class="hidden sm:inline-flex px-5 py-2.5 rounded-full bg-surface-container-low text-on-surface font-label-lg text-label-lg shadow-sm hover:bg-surface-container active:scale-95 transition-all magnetic-btn" type="button">
+          Sign In
+        </button>
+<button class="px-5 py-2.5 rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg shadow-md hover:shadow-lg active:scale-95 transition-all clay-button magnetic-btn" type="button">
+          Get Started
+        </button>
+</div>
+</nav>
+</header>
+<!-- Hero Section with Cursor-Responsive Parallax & Interactive Clay Mascot -->
+<section class="w-full max-w-[1360px] mx-auto px-4 md:px-8 pt-6 pb-16 lg:pt-10 lg:pb-24 overflow-visible" id="hero-section">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+<!-- Left Copy -->
+<div class="lg:col-span-6 flex flex-col items-start gap-6 reveal-item revealed">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md shadow-sm border border-white/60">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">science</span>
+<span>Campus-Wide Research Network</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight">
+          Big ideas start in the right lab.
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+          Discover specialised equipment, access laboratories across campus and bring your next project to life.
+        </p>
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="magnetic-btn inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg shadow-md hover:shadow-xl active:scale-95 transition-all clay-button" href="#equipment">
+<span>Explore Equipment</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+<a class="magnetic-btn inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-surface-container-lowest text-on-surface font-label-lg text-label-lg shadow-md hover:shadow-xl active:scale-95 transition-all border border-white/80" href="#how-it-works">
+<span class="material-symbols-outlined text-lg text-primary">play_circle</span>
+<span>How LabLink Works</span>
+</a>
+</div>
+<!-- Quick Trust Metrics -->
+<div class="grid grid-cols-3 gap-4 pt-4 w-full max-w-md">
+<div class="bg-surface-container-lowest rounded-lg p-4 shadow-sm clay-card border border-white/80 hover:-translate-y-1 transition-transform">
+<div class="font-headline-md text-headline-md text-primary font-bold">140+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Shared Instruments</div>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-4 shadow-sm clay-card border border-white/80 hover:-translate-y-1 transition-transform">
+<div class="font-headline-md text-headline-md text-secondary font-bold">18</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Campus Labs</div>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-4 shadow-sm clay-card border border-white/80 hover:-translate-y-1 transition-transform">
+<div class="font-headline-md text-headline-md text-tertiary font-bold">24/7</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Smart Booking</div>
+</div>
+</div>
+</div>
+<!-- Right 3D Clay Illustration with Dynamic Parallax & Interactive Mascot -->
+<div class="lg:col-span-6 relative" id="hero-parallax-container" style="perspective: 1200px;">
+<div class="relative bg-surface-container-lowest rounded-xl p-4 md:p-6 shadow-xl overflow-visible border border-white/80 clay-card transition-transform duration-300 ease-out" id="hero-3d-card" style="transform-style: preserve-3d;">
+<div class="absolute -top-12 -right-12 w-48 h-48 rounded-full bg-primary-container/40 blur-2xl pointer-events-none"></div>
+<div class="absolute -bottom-12 -left-12 w-48 h-48 rounded-full bg-secondary-container/40 blur-2xl pointer-events-none"></div>
+<!-- Base Rendered Screenshot Image -->
+<img alt="3D clay laboratory equipment network" class="relative z-10 w-full h-auto rounded-lg object-cover shadow-sm pointer-events-none select-none" id="hero-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWS6dGXDHSrAg2E4vV1hOtoEVt2dIooqBaBStSEk6k5kYNyFEmFRJpt_TW97_0JRbhfE1PQrZjVrdIkbHcbzbgh8lqskjznCK3oLAhrrqgF_V-5AE0vd3315hZK7bCJrYMhHC0gPf0xE1zWa5Qwq3nY0xdy0ez5CbYeh7D2FN4GOeRUXBfuJ7EK9HIoeO1jOYwRlTvGdiYrcRjQGDVnRwJN5-uVza87SA3k8sXaqI"/>
+<!-- Floating Parallax Layer Badges (Multi-layer 3D depth) -->
+<div class="parallax-badge absolute -top-4 -left-4 sm:left-4 z-20 px-3.5 py-2 rounded-2xl bg-surface-container-lowest/95 backdrop-blur-md shadow-lg border border-white/80 flex items-center gap-2 pointer-events-none text-xs font-semibold text-primary" data-depth="28">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span>Robotics Bay Active</span>
+</div>
+<div class="parallax-badge absolute top-12 -right-3 sm:-right-4 z-20 px-3.5 py-2 rounded-2xl bg-secondary-container/95 backdrop-blur-md shadow-lg border border-white/80 flex items-center gap-2 pointer-events-none text-xs font-semibold text-on-secondary-container" data-depth="-34">
+<span class="material-symbols-outlined text-sm">verified</span>
+<span>99.4% Precision</span>
+</div>
+<div class="parallax-badge absolute bottom-16 -left-3 sm:-left-5 z-20 px-3.5 py-2 rounded-2xl bg-primary-fixed/95 backdrop-blur-md shadow-lg border border-white/80 flex items-center gap-2 pointer-events-none text-xs font-semibold text-on-primary-fixed" data-depth="-22">
+<span class="material-symbols-outlined text-sm">auto_fix_high</span>
+<span>AI Calibration Ready</span>
+</div>
+<div class="parallax-badge absolute -bottom-4 right-8 z-20 px-3.5 py-2 rounded-2xl bg-tertiary-fixed/95 backdrop-blur-md shadow-lg border border-white/80 flex items-center gap-2 pointer-events-none text-xs font-semibold text-on-tertiary-fixed" data-depth="32">
+<span class="material-symbols-outlined text-sm">lock_clock</span>
+<span>Safe Booking Gate</span>
+</div>
+<!-- Interactive Clay Robot Mascot in Hero -->
+<div class="absolute -top-10 right-8 sm:right-16 z-30 flex flex-col items-center cursor-pointer group" id="hero-robot-mascot">
+<!-- Friendly Speech Bubble -->
+<div class="bg-surface-container-lowest text-on-surface px-3 py-1.5 rounded-full shadow-md text-xs font-semibold border border-white mb-1.5 opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all flex items-center gap-1.5" id="hero-robot-speech">
+<span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+<span id="hero-robot-text">Ready to book a lab?</span>
+</div>
+<!-- Robot SVG with tracking eyes and wave trigger -->
+<div class="w-16 h-20 animate-robot-float relative">
+<svg class="w-full h-full drop-shadow-md overflow-visible" id="robot-svg" viewbox="0 0 70 85">
+<defs>
+<radialgradient cx="35%" cy="30%" id="clayGrad" r="70%">
+<stop offset="0%" stop-color="#afefdc"></stop>
+<stop offset="60%" stop-color="#29695a"></stop>
+<stop offset="100%" stop-color="#1b473d"></stop>
+</radialgradient>
+<radialgradient cx="35%" cy="30%" id="clayHead" r="65%">
+<stop offset="0%" stop-color="#ffffff"></stop>
+<stop offset="70%" stop-color="#d4eae4"></stop>
+<stop offset="100%" stop-color="#a8e8d5"></stop>
+</radialgradient>
+<filter height="140%" id="clayGlow" width="140%" x="-20%" y="-20%">
+<fegaussianblur in="SourceAlpha" stddeviation="2"></fegaussianblur>
+<feoffset dx="0" dy="2" result="offsetblur"></feoffset>
+<fecomponenttransfer><fefunca slope="0.25" type="linear"></fefunca></fecomponenttransfer>
+<femerge>
+<femergenode></femergenode>
+<femergenode in="SourceGraphic"></femergenode>
+</femerge>
+</filter>
+</defs>
+<!-- Antenna -->
+<line stroke="#29695a" stroke-linecap="round" stroke-width="3" x1="35" x2="35" y1="14" y2="4"></line>
+<circle cx="35" cy="4" fill="#f5b5c4" r="3.5"></circle>
+<!-- Robot Head -->
+<g id="robot-head" style="transition: transform 0.1s ease-out; transform-origin: 35px 26px;">
+<rect fill="url(#clayHead)" height="26" rx="9" stroke="#ffffff" stroke-width="1.5" width="38" x="16" y="13"></rect>
+<!-- Visor Screen -->
+<rect fill="#1d1c15" height="15" rx="6" width="28" x="21" y="19"></rect>
+<!-- Eye left -->
+<g id="eye-left-group">
+<circle cx="28" cy="26" fill="#a8e8d5" r="3.5"></circle>
+<circle class="pupil" cx="28" cy="26" fill="#002019" id="pupil-left" r="1.8"></circle>
+<circle cx="27" cy="25" fill="#ffffff" r="0.7"></circle>
+</g>
+<!-- Eye right -->
+<g id="eye-right-group">
+<circle cx="42" cy="26" fill="#a8e8d5" r="3.5"></circle>
+<circle class="pupil" cx="42" cy="26" fill="#002019" id="pupil-right" r="1.8"></circle>
+<circle cx="41" cy="25" fill="#ffffff" r="0.7"></circle>
+</g>
+</g>
+<!-- Robot Body -->
+<rect fill="url(#clayGrad)" height="30" rx="10" stroke="#ffffff" stroke-width="1.2" width="34" x="18" y="42"></rect>
+<rect fill="#ffffff" fill-opacity="0.3" height="14" rx="4" width="20" x="25" y="50"></rect>
+<circle cx="35" cy="57" fill="#b0e4fd" r="3"></circle>
+<!-- Arms -->
+<!-- Left waving arm -->
+<g id="robot-arm-left" style="transform-origin: 18px 47px;">
+<path d="M 17 48 Q 9 44 9 36" fill="none" stroke="#29695a" stroke-linecap="round" stroke-width="4"></path>
+<circle cx="9" cy="35" fill="#f5b5c4" r="3.5"></circle>
+</g>
+<!-- Right arm -->
+<g id="robot-arm-right">
+<path d="M 52 48 Q 59 52 58 60" fill="none" stroke="#29695a" stroke-linecap="round" stroke-width="4"></path>
+<circle cx="58" cy="61" fill="#f5b5c4" r="3.5"></circle>
+</g>
+<!-- Wheels / Base -->
+<ellipse cx="35" cy="74" fill="#2f6579" rx="12" ry="4"></ellipse>
+</svg>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Equipment Discovery Preview Cards with 3D Tilt, Sheen & Interactive Expand -->
+<section class="w-full max-w-[1360px] mx-auto px-4 md:px-8 py-12 lg:py-16" id="equipment">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 reveal-item">
+<div class="flex flex-col gap-2">
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary">01 / Equipment Discovery</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Ready-to-book instruments</h2>
+</div>
+<!-- Filter Pills with smooth tactile response -->
+<div class="flex flex-wrap items-center gap-2" id="equipment-filters">
+<button class="filter-btn magnetic-btn px-4 py-2 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md shadow-sm transition-all clay-button" data-filter="all" type="button">All Labs</button>
+<button class="filter-btn magnetic-btn px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container-low transition-all border border-white/60" data-filter="imaging" type="button">Imaging</button>
+<button class="filter-btn magnetic-btn px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container-low transition-all border border-white/60" data-filter="fabrication" type="button">Fabrication</button>
+<button class="filter-btn magnetic-btn px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container-low transition-all border border-white/60" data-filter="wet-lab" type="button">Wet Lab</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="equipment-grid">
+<!-- Card 1 -->
+<article class="equipment-card reveal-item relative overflow-hidden bg-surface-container-lowest rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between gap-5 border border-white/80 clay-card group cursor-pointer" data-category="imaging" style="transform-style: preserve-3d; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+<!-- Dynamic Specular Gloss Sheen -->
+<div class="specular-shine absolute inset-0 rounded-lg pointer-events-none z-10"></div>
+<div class="flex flex-col gap-4 relative z-20">
+<div class="flex items-center justify-between gap-2">
+<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md">Imaging</span>
+<span class="inline-flex items-center gap-1.5 font-label-md text-label-md text-primary font-medium">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+              Available Today
+            </span>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-2xl bg-secondary-container/60 flex items-center justify-center shrink-0 text-on-secondary-container shadow-inner">
+<span class="material-symbols-outlined text-2xl">biotech</span>
+</div>
+<div class="min-w-0">
+<h3 class="font-title-md text-title-md text-on-surface truncate">Confocal Laser Microscope</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Bio-Imaging Core • Rm 304</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            High-resolution 4-channel fluorescence imaging for live-cell and fixed-tissue samples.
+          </p>
+<!-- Accordion Details Toggle -->
+<div class="overflow-hidden max-h-0 group-hover:max-h-24 transition-all duration-300 ease-in-out">
+<div class="pt-2 text-xs text-on-surface-variant/90 border-t border-surface-variant flex flex-wrap gap-2">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-low">405/488/561/640nm Lasers</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-low">Airyscan 2</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-low">CO2 Incubator</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 relative z-20">
+<span class="font-label-md text-label-md text-on-surface-variant">Next slot: 2:30 PM</span>
+<button class="magnetic-btn clay-button px-4 py-2 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md shadow-sm hover:shadow-md active:scale-95 transition-all reserve-btn" type="button">
+            Reserve
+          </button>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="equipment-card reveal-item relative overflow-hidden bg-surface-container-lowest rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between gap-5 border border-white/80 clay-card group cursor-pointer" data-category="fabrication" style="transform-style: preserve-3d; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+<div class="specular-shine absolute inset-0 rounded-lg pointer-events-none z-10"></div>
+<div class="flex flex-col gap-4 relative z-20">
+<div class="flex items-center justify-between gap-2">
+<span class="px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-md text-label-md">Fabrication</span>
+<span class="inline-flex items-center gap-1.5 font-label-md text-label-md text-primary font-medium">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+              Available Now
+            </span>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-2xl bg-tertiary-container/60 flex items-center justify-center shrink-0 text-on-tertiary-container shadow-inner">
+<span class="material-symbols-outlined text-2xl">precision_manufacturing</span>
+</div>
+<div class="min-w-0">
+<h3 class="font-title-md text-title-md text-on-surface truncate">6-Axis Robotic Arm Cell</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Mechatronics Lab • Rm 112</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Programmable precision assembly unit with force-torque sensing and Python SDK.
+          </p>
+<div class="overflow-hidden max-h-0 group-hover:max-h-24 transition-all duration-300 ease-in-out">
+<div class="pt-2 text-xs text-on-surface-variant/90 border-t border-surface-variant flex flex-wrap gap-2">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-low">Payload: 5kg</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-low">ROS 2 Compatible</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-low">OptiTrack Sync</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 relative z-20">
+<span class="font-label-md text-label-md text-on-surface-variant">Next slot: 1:00 PM</span>
+<button class="magnetic-btn clay-button px-4 py-2 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md shadow-sm hover:shadow-md active:scale-95 transition-all reserve-btn" type="button">
+            Reserve
+          </button>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="equipment-card reveal-item relative overflow-hidden bg-surface-container-lowest rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between gap-5 border border-white/80 clay-card group cursor-pointer" data-category="wet-lab" style="transform-style: preserve-3d; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+<div class="specular-shine absolute inset-0 rounded-lg pointer-events-none z-10"></div>
+<div class="flex flex-col gap-4 relative z-20">
+<div class="flex items-center justify-between gap-2">
+<span class="px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md">Wet Lab</span>
+<span class="inline-flex items-center gap-1.5 font-label-md text-label-md text-tertiary font-medium">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+              In Use Until 3 PM
+            </span>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-2xl bg-primary-container/60 flex items-center justify-center shrink-0 text-on-primary-container shadow-inner">
+<span class="material-symbols-outlined text-2xl">humidity_percentage</span>
+</div>
+<div class="min-w-0">
+<h3 class="font-title-md text-title-md text-on-surface truncate">UV-Vis Spectrophotometer</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Analytical Chem • Rm 208</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Dual-beam UV-Vis absorbance &amp; kinetics analyzer with temperature-controlled cuvette holder.
+          </p>
+<div class="overflow-hidden max-h-0 group-hover:max-h-24 transition-all duration-300 ease-in-out">
+<div class="pt-2 text-xs text-on-surface-variant/90 border-t border-surface-variant flex flex-wrap gap-2">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-low">190–1100 nm Range</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-low">Peltier Thermal Cell</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-low">Automated 8-slot carousel</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 relative z-20">
+<span class="font-label-md text-label-md text-on-surface-variant">Next slot: 3:15 PM</span>
+<button class="magnetic-btn clay-button px-4 py-2 rounded-full bg-surface-container-low text-on-surface font-label-md text-label-md shadow-sm hover:bg-primary-container hover:text-on-primary-container active:scale-95 transition-all reserve-btn" type="button">
+            Join Queue
+          </button>
+</div>
+</article>
+</div>
+</section>
+<!-- Connected Laboratory Departments with Staggered Entrance -->
+<section class="w-full max-w-[1360px] mx-auto px-4 md:px-8 py-12 lg:py-16" id="departments">
+<div class="bg-surface-container-low rounded-xl p-8 md:p-12 shadow-sm clay-card border border-white/60 reveal-item">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+<div class="flex flex-col gap-2">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary">02 / Campus Network</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Connected laboratory departments</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Cross-disciplinary access across engineering, life sciences, and physical chemistry.
+        </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="reveal-item bg-surface-container-lowest rounded-lg p-6 shadow-md hover:-translate-y-2 hover:shadow-lg transition-all duration-300 flex flex-col gap-3 border border-white/80 clay-card group cursor-pointer">
+<div class="w-11 h-11 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">genetics</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface">Bioengineering</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">34 instruments • 92% uptime</p>
+</div>
+<div class="reveal-item bg-surface-container-lowest rounded-lg p-6 shadow-md hover:-translate-y-2 hover:shadow-lg transition-all duration-300 flex flex-col gap-3 border border-white/80 clay-card group cursor-pointer">
+<div class="w-11 h-11 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">memory</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface">Robotics &amp; ECE</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">42 instruments • 98% uptime</p>
+</div>
+<div class="reveal-item bg-surface-container-lowest rounded-lg p-6 shadow-md hover:-translate-y-2 hover:shadow-lg transition-all duration-300 flex flex-col gap-3 border border-white/80 clay-card group cursor-pointer">
+<div class="w-11 h-11 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">experiment</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface">Materials &amp; Chem</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">29 instruments • 95% uptime</p>
+</div>
+<div class="reveal-item bg-surface-container-lowest rounded-lg p-6 shadow-md hover:-translate-y-2 hover:shadow-lg transition-all duration-300 flex flex-col gap-3 border border-white/80 clay-card group cursor-pointer">
+<div class="w-11 h-11 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">view_in_ar</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface">Rapid Prototyping</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">35 instruments • 99% uptime</p>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works 3-Step Clay Cards with Tactile Float -->
+<section class="w-full max-w-[1360px] mx-auto px-4 md:px-8 py-12 lg:py-16" id="how-it-works">
+<div class="text-center max-w-2xl mx-auto mb-12 flex flex-col gap-3 reveal-item">
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary">03 / Workflow</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">From idea to bench in three steps</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="reveal-item bg-surface-container-lowest rounded-lg p-8 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col gap-4 border border-white/80 clay-card group">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container font-headline-sm text-headline-sm flex items-center justify-center shadow-sm group-hover:rotate-6 transition-transform">
+          1
+        </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Describe your experiment</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Search by instrument name or let LabLink AI recommend compatible equipment based on your protocol.
+        </p>
+</div>
+<div class="reveal-item bg-surface-container-lowest rounded-lg p-8 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col gap-4 border border-white/80 clay-card group">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container font-headline-sm text-headline-sm flex items-center justify-center shadow-sm group-hover:rotate-6 transition-transform">
+          2
+        </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Pick a smart time slot</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          View live calibration status, safety prerequisites, and open windows across all campus buildings.
+        </p>
+</div>
+<div class="reveal-item bg-surface-container-lowest rounded-lg p-8 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col gap-4 border border-white/80 clay-card group">
+<div class="w-12 h-12 rounded-full bg-tertiary-container text-on-tertiary-container font-headline-sm text-headline-sm flex items-center justify-center shadow-sm group-hover:rotate-6 transition-transform">
+          3
+        </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Tap in &amp; start building</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Receive instant digital badge access and automated usage logs synced with your research group.
+        </p>
+</div>
+</div>
+</section>
+<!-- AI-Powered Equipment Matching & Smart Scheduling Highlights -->
+<section class="w-full max-w-[1360px] mx-auto px-4 md:px-8 py-12 lg:py-16" id="ai-matching">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+<!-- AI Matching Card -->
+<div class="reveal-item lg:col-span-7 bg-surface-container-lowest rounded-xl p-8 md:p-10 shadow-lg flex flex-col justify-between gap-6 border border-white/80 clay-card">
+<div class="flex flex-col gap-4">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md w-fit">
+<span class="material-symbols-outlined text-base">auto_awesome</span>
+<span>AI-Powered Matching</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">
+            Not sure which instrument fits your sample?
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Paste your assay or fabrication requirements. LabLink matches resolution, throughput, and safety clearances in seconds.
+          </p>
+</div>
+<div class="bg-surface-container-low rounded-lg p-5 flex flex-col gap-4 border border-white/60 shadow-inner">
+<div class="flex items-center gap-3 bg-surface-container-lowest rounded-full px-5 py-3 shadow-inner hover:ring-2 hover:ring-primary/30 transition-all">
+<span class="material-symbols-outlined text-primary">search</span>
+<span class="font-body-md text-body-md text-on-surface-variant truncate">"Need sub-micron 3D printing for microfluidic channels..."</span>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">98% Match</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Nanoscribe Photonic Pro</span>
+</div>
+<span class="font-body-sm text-body-sm text-primary font-semibold">Cleanroom B • Open 4:00 PM</span>
+</div>
+</div>
+</div>
+<!-- Smart Scheduling Card -->
+<div class="reveal-item lg:col-span-5 bg-primary-container rounded-xl p-8 md:p-10 shadow-lg flex flex-col justify-between gap-6 text-on-primary-container border border-white/40 clay-card">
+<div class="flex flex-col gap-3">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md w-fit shadow-sm">
+<span class="material-symbols-outlined text-base text-primary">calendar_month</span>
+<span>Smart Scheduling</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-primary-container">
+            Zero-conflict lab calendars
+          </h2>
+<p class="font-body-md text-body-md text-on-primary-container/90">
+            Automatic buffer times for calibration, sterilization, and reagent prep.
+          </p>
+</div>
+<!-- Mini Clay Calendar Widget -->
+<div class="bg-surface-container-lowest rounded-lg p-5 shadow-md text-on-surface border border-white/80">
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-lg text-label-lg font-semibold">October 2025</span>
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">3 Slots Open</span>
+</div>
+<div class="grid grid-cols-7 gap-2 text-center font-label-sm text-label-sm text-on-surface-variant mb-2">
+<span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
+</div>
+<div class="grid grid-cols-7 gap-2 text-center font-label-md text-label-md">
+<span class="py-1.5 rounded-full text-on-surface-variant">13</span>
+<span class="py-1.5 rounded-full bg-primary-container text-on-primary-container shadow-sm font-semibold cursor-pointer hover:scale-110 transition-transform">14</span>
+<span class="py-1.5 rounded-full bg-secondary-container text-on-secondary-container cursor-pointer hover:scale-110 transition-transform">15</span>
+<span class="py-1.5 rounded-full bg-secondary-container text-on-secondary-container cursor-pointer hover:scale-110 transition-transform">16</span>
+<span class="py-1.5 rounded-full hover:bg-surface-container-low cursor-pointer transition-colors">17</span>
+<span class="py-1.5 rounded-full text-on-surface-variant">18</span>
+<span class="py-1.5 rounded-full text-on-surface-variant">19</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Faculty Collaboration Section -->
+<section class="w-full max-w-[1360px] mx-auto px-4 md:px-8 py-12 lg:py-16">
+<div class="reveal-item bg-surface-container-lowest rounded-xl p-8 md:p-12 shadow-md grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-white/80 clay-card">
+<div class="lg:col-span-7 flex flex-col gap-4">
+<span class="font-label-md text-label-md uppercase tracking-wider text-tertiary">04 / Faculty &amp; PI Controls</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+          Built for principal investigators &amp; lab managers
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+          Approve student training certifications, track grant-funded instrument hours, and share idle bench capacity with partner departments—all from one calm dashboard.
+        </p>
+<div class="flex flex-wrap gap-3 pt-2">
+<span class="px-4 py-2 rounded-full bg-surface-container-low font-label-md text-label-md text-on-surface shadow-sm border border-white/60">Training Gatekeeping</span>
+<span class="px-4 py-2 rounded-full bg-surface-container-low font-label-md text-label-md text-on-surface shadow-sm border border-white/60">Grant Usage Reports</span>
+<span class="px-4 py-2 rounded-full bg-surface-container-low font-label-md text-label-md text-on-surface shadow-sm border border-white/60">Automated Billing</span>
+</div>
+</div>
+<div class="lg:col-span-5 grid grid-cols-2 gap-4">
+<div class="bg-secondary-container/50 rounded-lg p-5 flex flex-col gap-2 border border-white/70 clay-card hover:-translate-y-1 transition-transform">
+<span class="material-symbols-outlined text-on-secondary-container text-2xl">verified_user</span>
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold">100%</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Safety-verified bookings</div>
+</div>
+<div class="bg-tertiary-container/50 rounded-lg p-5 flex flex-col gap-2 border border-white/70 clay-card hover:-translate-y-1 transition-transform">
+<span class="material-symbols-outlined text-on-tertiary-container text-2xl">group_add</span>
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold">4.2x</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Cross-lab collaboration</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Banner -->
+<section class="w-full max-w-[1360px] mx-auto px-4 md:px-8 pt-6 pb-24">
+<div class="reveal-item bg-secondary-container rounded-xl p-10 md:p-14 shadow-lg text-center flex flex-col items-center gap-6 border border-white/60 clay-card">
+<h2 class="font-headline-lg text-headline-lg text-on-secondary-container max-w-2xl font-bold">
+        Ready to unlock every lab on campus?
+      </h2>
+<p class="font-body-lg text-body-lg text-on-secondary-container/90 max-w-xl">
+        Sign in with your university credentials to browse live equipment availability and book your first session.
+      </p>
+<div class="flex flex-wrap items-center justify-center gap-4">
+<button class="magnetic-btn clay-button px-8 py-4 rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg shadow-md hover:shadow-xl active:scale-95 transition-all" type="button">
+          Get Started Free
+        </button>
+<button class="magnetic-btn px-8 py-4 rounded-full bg-surface-container-lowest text-on-surface font-label-lg text-label-lg shadow-md hover:shadow-xl active:scale-95 transition-all border border-white/80" type="button">
+          Request Lab Onboarding
+        </button>
+</div>
+</div>
+</section>
+</div>
+<!-- Floating Interactive Clay AI Assistant Widget (Bottom-Right) -->
+<aside class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+<!-- Expanded Assistant Card Dialog (Toggled) -->
+<div class="mb-3 w-80 md:w-96 bg-surface-container-lowest/95 backdrop-blur-md rounded-2xl p-5 shadow-2xl border border-white/90 clay-card transition-all duration-300 origin-bottom-right hidden" id="assistant-dialog">
+<div class="flex items-center justify-between pb-3 border-b border-surface-variant">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined text-lg">smart_toy</span>
+</div>
+<div>
+<h4 class="font-label-lg text-sm text-on-surface font-bold">LabBot AI</h4>
+<p class="text-[11px] text-primary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+            Online • Campus Network
+          </p>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded-full hover:bg-surface-container-low transition-colors" id="close-assistant" type="button">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<div class="py-3 flex flex-col gap-2.5 max-h-56 overflow-y-auto">
+<div class="bg-surface-container-low p-3 rounded-xl rounded-tl-sm text-xs text-on-surface leading-relaxed border border-white/60">
+        Hi there! I can check live calibration, reserve cleanrooms, or match your protocol with available campus hardware.
+      </div>
+<!-- Suggested Prompts -->
+<div class="flex flex-col gap-1.5 pt-1">
+<button class="prompt-chip text-left text-xs px-3 py-2 rounded-xl bg-surface-container-lowest hover:bg-secondary-container hover:text-on-secondary-container text-on-surface transition-colors border border-surface-variant/60 flex items-center justify-between" type="button">
+<span>Find 3D bioprinters open this week</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<button class="prompt-chip text-left text-xs px-3 py-2 rounded-xl bg-surface-container-lowest hover:bg-secondary-container hover:text-on-secondary-container text-on-surface transition-colors border border-surface-variant/60 flex items-center justify-between" type="button">
+<span>What safety training do I need for Rm 304?</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Typing indicator mock -->
+<div class="pt-2 border-t border-surface-variant flex items-center gap-2">
+<input class="w-full bg-surface-container-low rounded-full px-3.5 py-2 text-xs text-on-surface placeholder:text-on-surface-variant outline-none border border-transparent focus:border-primary transition-all" id="assistant-input" placeholder="Ask LabBot..." type="text"/>
+<button class="p-2 rounded-full bg-primary-container text-on-primary-container shadow-sm active:scale-90 transition-transform flex items-center justify-center shrink-0" type="button">
+<span class="material-symbols-outlined text-sm">send</span>
+</button>
+</div>
+</div>
+<!-- Floating Mascot Trigger Button -->
+<button aria-label="Open AI Assistant" class="magnetic-btn clay-button relative group flex items-center gap-3 px-4 py-2.5 rounded-full bg-surface-container-lowest/95 backdrop-blur-md shadow-xl border-2 border-primary/20 hover:border-primary active:scale-95 transition-all" id="assistant-toggle-btn" type="button">
+<div class="relative w-8 h-8 flex items-center justify-center">
+<svg class="w-8 h-8 overflow-visible" viewbox="0 0 70 85">
+<rect fill="#29695a" height="34" rx="10" width="38" x="16" y="24"></rect>
+<rect fill="#1d1c15" height="15" rx="5" width="28" x="21" y="32"></rect>
+<circle class="pupil-dock" cx="29" cy="39" fill="#a8e8d5" r="2.5"></circle>
+<circle class="pupil-dock" cx="41" cy="39" fill="#a8e8d5" r="2.5"></circle>
+<line stroke="#29695a" stroke-linecap="round" stroke-width="3" x1="35" x2="35" y1="24" y2="12"></line>
+<circle cx="35" cy="11" fill="#f5b5c4" r="4"></circle>
+</svg>
+<span class="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-primary ring-2 ring-white"></span>
+</div>
+<span class="font-label-md text-xs font-semibold text-on-surface">Ask LabBot</span>
+</button>
+</aside>
+<script>
+  // Filter Functionality
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter');
+      document.querySelectorAll('.filter-btn').forEach(b => {
+        b.classList.remove('bg-primary-container', 'text-on-primary-container');
+        b.classList.add('bg-surface-container-lowest', 'text-on-surface');
+      });
+      btn.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+      btn.classList.add('bg-primary-container', 'text-on-primary-container');
+
+      document.querySelectorAll('.equipment-card').forEach(card => {
+        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Check reduced motion preference
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // 1. Cursor-Responsive 3D Parallax in Hero
+  const heroCard = document.getElementById('hero-3d-card');
+  const heroContainer = document.getElementById('hero-parallax-container');
+  const parallaxBadges = document.querySelectorAll('.parallax-badge');
+  const robotHead = document.getElementById('robot-head');
+  const pupilLeft = document.getElementById('pupil-left');
+  const pupilRight = document.getElementById('pupil-right');
+  const pupilsDock = document.querySelectorAll('.pupil-dock');
+
+  let mouseX = window.innerWidth / 2;
+  let mouseY = window.innerHeight / 2;
+  let currentCardX = 0, currentCardY = 0;
+  let targetCardX = 0, targetCardY = 0;
+
+  if (!prefersReducedMotion && heroContainer && heroCard) {
+    heroContainer.addEventListener('mousemove', (e) => {
+      const rect = heroContainer.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      targetCardX = x * 14; // degrees
+      targetCardY = -y * 14;
+    });
+
+    heroContainer.addEventListener('mouseleave', () => {
+      targetCardX = 0;
+      targetCardY = 0;
+    });
+  }
+
+  // Global mousemove for eyes & magnetic elements
+  window.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+
+    // Specular highlight on cards
+    document.querySelectorAll('.equipment-card').forEach(card => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    });
+  }, { passive: true });
+
+  // Animation Loop with lerp damping
+  function updateMotion() {
+    if (!prefersReducedMotion) {
+      // Lerp Hero card rotation
+      currentCardX += (targetCardX - currentCardX) * 0.08;
+      currentCardY += (targetCardY - currentCardY) * 0.08;
+
+      if (heroCard) {
+        heroCard.style.transform = `rotateY(${currentCardX}deg) rotateX(${currentCardY}deg)`;
+      }
+
+      // Parallax badges opposing offset
+      parallaxBadges.forEach(badge => {
+        const depth = parseFloat(badge.getAttribute('data-depth') || 20);
+        const bx = currentCardX * (depth / 12);
+        const by = -currentCardY * (depth / 12);
+        badge.style.transform = `translate3d(${bx}px, ${by}px, ${Math.abs(depth)}px)`;
+      });
+
+      // Robot Mascot Eyes & Head Tracking
+      if (robotHead && pupilLeft && pupilRight) {
+        const eyeLeftBox = pupilLeft.getBoundingClientRect();
+        const eyeRightBox = pupilRight.getBoundingClientRect();
+
+        // Eye Left angle & bounded offset
+        const dxL = mouseX - (eyeLeftBox.left + eyeLeftBox.width / 2);
+        const dyL = mouseY - (eyeLeftBox.top + eyeLeftBox.height / 2);
+        const angleL = Math.atan2(dyL, dxL);
+        const distL = Math.min(2.0, Math.hypot(dxL, dyL) * 0.015);
+        pupilLeft.setAttribute('transform', `translate(${Math.cos(angleL) * distL}, ${Math.sin(angleL) * distL})`);
+
+        // Eye Right angle & bounded offset
+        const dxR = mouseX - (eyeRightBox.left + eyeRightBox.width / 2);
+        const dyR = mouseY - (eyeRightBox.top + eyeRightBox.height / 2);
+        const angleR = Math.atan2(dyR, dxR);
+        const distR = Math.min(2.0, Math.hypot(dxR, dyR) * 0.015);
+        pupilRight.setAttribute('transform', `translate(${Math.cos(angleR) * distR}, ${Math.sin(angleR) * distR})`);
+
+        // Subtle head tilt
+        const headTilt = Math.max(-6, Math.min(6, (mouseX - window.innerWidth / 2) * 0.008));
+        robotHead.style.transform = `rotate(${headTilt}deg)`;
+      }
+
+      // Dock mini mascot tracking
+      pupilsDock.forEach(p => {
+        const box = p.getBoundingClientRect();
+        const dx = mouseX - (box.left + box.width / 2);
+        const dy = mouseY - (box.top + box.height / 2);
+        const angle = Math.atan2(dy, dx);
+        const dist = Math.min(1.5, Math.hypot(dx, dy) * 0.01);
+        p.setAttribute('transform', `translate(${Math.cos(angle) * dist}, ${Math.sin(angle) * dist})`);
+      });
+    }
+
+    requestAnimationFrame(updateMotion);
+  }
+  requestAnimationFrame(updateMotion);
+
+  // 2. Interactive Robot Mascot Reactions
+  const heroRobot = document.getElementById('hero-robot-mascot');
+  const robotArmLeft = document.getElementById('robot-arm-left');
+  const speechBubble = document.getElementById('hero-robot-speech');
+  const speechText = document.getElementById('hero-robot-text');
+
+  const funGreetings = [
+    "Hello! Ready to book a lab?",
+    "Need Confocal or 6-Axis bot?",
+    "All campus safety checks passed!",
+    "Let's build something brilliant!"
+  ];
+  let greetingIndex = 0;
+
+  if (heroRobot && robotArmLeft) {
+    const triggerWave = () => {
+      robotArmLeft.classList.remove('robot-waving');
+      void robotArmLeft.offsetWidth; // trigger reflow
+      robotArmLeft.classList.add('robot-waving');
+      
+      greetingIndex = (greetingIndex + 1) % funGreetings.length;
+      if (speechText) speechText.textContent = funGreetings[greetingIndex];
+      if (speechBubble) {
+        speechBubble.classList.add('scale-110');
+        setTimeout(() => speechBubble.classList.remove('scale-110'), 250);
+      }
+    };
+
+    heroRobot.addEventListener('mouseenter', triggerWave);
+    heroRobot.addEventListener('click', triggerWave);
+  }
+
+  // 3. Magnetic UI Elements Pull
+  if (!prefersReducedMotion) {
+    const magneticBtns = document.querySelectorAll('.magnetic-btn');
+    magneticBtns.forEach(btn => {
+      btn.addEventListener('mousemove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const btnCenterX = rect.left + rect.width / 2;
+        const btnCenterY = rect.top + rect.height / 2;
+        const dist = Math.hypot(e.clientX - btnCenterX, e.clientY - btnCenterY);
+
+        if (dist < 70) {
+          const pullX = (e.clientX - btnCenterX) * 0.22;
+          const pullY = (e.clientY - btnCenterY) * 0.22;
+          btn.style.transform = `translate(${pullX}px, ${pullY}px)`;
+        }
+      });
+
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transform = 'translate(0px, 0px)';
+      });
+    });
+  }
+
+  // 4. Progressive Scroll Reveal with IntersectionObserver
+  const revealElements = document.querySelectorAll('.reveal-item');
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    rootMargin: '0px 0px -60px 0px',
+    threshold: 0.12
+  });
+
+  revealElements.forEach((el, index) => {
+    // Add staggered delay to child cards
+    const delay = (index % 4) * 0.08;
+    el.style.transitionDelay = `${delay}s`;
+    revealObserver.observe(el);
+  });
+
+  // 5. Individual Equipment Card 3D Tilt
+  if (!prefersReducedMotion) {
+    document.querySelectorAll('.equipment-card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        card.style.transform = `perspective(1000px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateY(-4px)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(0px)';
+      });
+    });
+  }
+
+  // 6. Floating AI Assistant Widget Toggle & Suggestion Chips
+  const assistantBtn = document.getElementById('assistant-toggle-btn');
+  const assistantDialog = document.getElementById('assistant-dialog');
+  const closeAssistant = document.getElementById('close-assistant');
+  const assistantInput = document.getElementById('assistant-input');
+
+  if (assistantBtn && assistantDialog) {
+    assistantBtn.addEventListener('click', () => {
+      assistantDialog.classList.toggle('hidden');
+      if (!assistantDialog.classList.contains('hidden') && assistantInput) {
+        assistantInput.focus();
+      }
+    });
+
+    if (closeAssistant) {
+      closeAssistant.addEventListener('click', () => {
+        assistantDialog.classList.add('hidden');
+      });
+    }
+
+    document.querySelectorAll('.prompt-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        if (assistantInput) {
+          assistantInput.value = chip.querySelector('span')?.textContent || '';
+          assistantInput.focus();
+        }
+      });
+    });
+  }
+</script></main></body></html>
