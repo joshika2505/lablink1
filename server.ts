@@ -2,7 +2,6 @@ import 'dotenv/config';
 import path from 'node:path';
 import express from 'express';
 import { createClient } from '@supabase/supabase-js';
-import { createServer as createViteServer } from 'vite';
 import {
   isSupabaseAuthReady,
   isSupabaseServerConfigured,
@@ -59,9 +58,8 @@ function handleRouteError(res: express.Response, err: unknown, defaultStatus = 4
   });
 }
 
-async function startServer() {
+export async function createApp() {
   const app = express();
-  const PORT = Number(process.env.PORT) || 3000;
 
   app.use(express.json({ limit: '1mb' }));
 
@@ -1530,6 +1528,15 @@ async function startServer() {
     }
   });
 
+  return app;
+}
+
+// Local development: start the server with Vite HMR middleware
+async function startServer() {
+  const { createServer: createViteServer } = await import('vite');
+  const app = await createApp();
+  const PORT = Number(process.env.PORT) || 3000;
+
   if (process.env.NODE_ENV !== 'production') {
     const vite = await createViteServer({
       server: { middlewareMode: true },
@@ -1549,4 +1556,7 @@ async function startServer() {
   });
 }
 
-startServer();
+// Only start the HTTP server in non-Vercel environments (local dev)
+if (!process.env.VERCEL) {
+  startServer();
+}
